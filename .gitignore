@@ -1,0 +1,11 @@
+openwrt/*
+
+references
+
+proof-of-concept/ubuntu-22.04.1-live-server-amd64.iso
+root.cow*
+*.out
+
+proof-of-concept/openwrt/*
+!proof-of-concept/openwrt/.config
+!proof-of-concept/openwrt/feeds.conf.default

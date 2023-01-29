@@ -1,0 +1,20 @@
+#!/usr/sbin/nft -f
+
+flush ruleset bridge
+
+table bridge filter {
+        chain FORWARD {
+                type filter hook forward priority -200; policy accept;
+
+                iifname "tap1" oifname "tap2" limit rate 1250 kbytes/second accept
+                iifname "tap2" oifname "tap1" limit rate 1250 kbytes/second accept
+
+                iifname "tap2" oifname "tap3" limit rate 625 kbytes/second accept
+                iifname "tap3" oifname "tap2" limit rate 625 kbytes/second accept
+
+                iifname "tap1" oifname "tap3" limit rate 125 kbytes/second accept
+                iifname "tap3" oifname "tap1" limit rate 125 kbytes/second accept
+
+                meta obrname "br-qemu" drop
+        }
+}
