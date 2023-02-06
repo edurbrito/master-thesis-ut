@@ -1,7 +1,5 @@
 openwrt/*
 
-references
-
 proof-of-concept/ubuntu-22.04.1-live-server-amd64.iso
 root.cow*
 *.out
