@@ -46,7 +46,6 @@
 \usepackage{microtype}  %towards typographic perfection...
 \usepackage{inconsolata} %nicer font for code listings. (Use \ttfamily for lstinline bastype)
 
-
 % Use package babel for English or Estonian 
 % If you use Estonian make sure that Estonian hyphenation is installed 
 % - hypen-estonian or eehyp packages
@@ -357,25 +356,7 @@ the paper is significantly enhanced by their inclusion.}
 \newpage
 \section{Introduction}
 
-% \TODO{What is it in simple terms (title)?}
-% \TODO{Why should anyone care?}
-% \TODO{What was my contribution?} 
-% \TODO{What you are doing in each section (a sentence or two per section)}
-One is where and when one claims to be - this is the underlying principle of most of today's location-based services. This principle, however, hides a whole set of preceding premises that implicitly assert trust in the subject's honesty in reporting its correct location. Having this trust delegated, the reliance on a trusted third party, frequently an atomic computing entity, is still subject to tampering, repudiation, inaccuracy, punctual and single failure, or any other kind of Byzantine behaviour. 
-
-The trust levels required to testify to one's alibi remain unmeasurable in modern arrangements. Strategic interactions between rational agents often support this trust. One party provides a location-based service, and another party makes use of it for its individual benefit and by providing a non-tampered time-conscious piece of location claim. This interaction appears to be one of a non-zero-sum game that can be observed in most GPS-based services, mapping platforms, navigation systems, mobility and ride-hailing apps, among many others. If driven by the reasoning goal of extracting correct information from the interacting system, users are logically motivated to report an accurate location. The services, having the higher goal of not losing users due to their reported malfunctioning or inaccuracy, are thus motivated to provide maximized quality when operating and consuming the location claims. 
-
-This paradigm is now ubiquitous, which may lead to its fallacious use in other very distinct scenarios. Those scenarios are, therefore and inversely, the ones that fundamentally require verifiable proof of location to assert a particular state or derive a conclusion. Consider, for example, scenarios requiring location-based authentication or authorization in adversarial environments that rely on information gathered in a trustless setup. These materialize into services requiring, for instance, a digital certificate as proof that a given user is within a particular geographical area, to enable certain functionalities or assert liability, as in location-based access control, review or reward systems, augmented reality games, social networks, etc... Security against geo-tampering or location spoofing in a relatively trustless environment is needed to achieve the required integrity. 
-
-The basic infrastructural concept is somewhat understood, and theoretical or experimental solutions have been delivered throughout the years. These solutions have evolved parallel with their trust assumptions, beginning with a fully trusted setup and progressively shifting towards modern requirements for operational decentralization - of power and profit. Most recent attempts contemplate the need for a permissionless means of reaching consensus between a quorum of witnesses that can attest to one's presence at a given point in space and at a given moment in time. These concepts take shape with a combination of tools: wireless technologies as message-exchanging means, cryptographic protocols as confidentiality, integrity, or authentication enablers, and distributed ledgers as publicly trusted record keepers. 
-
-The quest for a solution that could make these location-based services as prevalent and ubiquitous shall aim to address a set of design challenges. These challenges are, among others, the solution's flexibility and deployability, preferably by making use of existing infrastructure, or at least accessible technology, and the solution's security and privacy, obeying the modern cryptographic standards and requirements, to guarantee some level of privacy, and resiliency to attacks. This thesis, aiming to address these matters, delivers the following contributions:
-\begin{enumerate}
-\item A semi-formalization of the location-based services paradigm, including the underlying premises and the strategic interactions between rational agents, along with a review of the state of the art in the field. The review is discriminated in terms of trust levels, from fully trusted to permissionless environments, and in terms of the underlying technology, from centralized to decentralized.
-\item The design and implementation of a proof-of-concept that can be deployed in a permissionless manner, using existing infrastructure, and that can be used to attest to one's presence at a given point in space and time. Specifically, the proof-of-concept is based on the use of routing protocols for multi-hop mobile ad hoc networks to set up a mesh network of witnesses that can attest to one's presence in a given geographical area.
-\end{enumerate}
-
-The structure of the work is as follows. In chapter 2, an introduction to the underlying concepts and hypotheses is provided, as well as a mention to the technology involded in the practical implementation. Chapter 3 examines and analyzes similar work discriminated in terms of trust levels. In chapter 4, a general overview of the requirements for the proposed solution is given. Chapter 5 details the architecture's design, implementation, and evaluation. Finally, chapter 6 presents the conclusion and recommendations for future work.
+\input{sections/introduction}
 
 \newpage
 \section{Prelude} 
@@ -384,67 +365,15 @@ This section introduces not only the underlying concepts that sustent the work, 
 
 \subsection{Proof-of-Location}
 
-
-
-\subsubsection{Parties Involved}
-
-The general act of witnessing alludes to the simultaneous spatiotemporal existence of a set of entities with distinct roles. The majority of the protocols convey a clear distinction between these roles, highlighting the relative dynamism that distinguishes those entities. 
-
-In comparable terms, highly dynamic entities do not maintain a fixed geographical location for long periods of time. They are often observed in movement, thereby repeatedly starting and finishing communication procedures with nearby entities. On the other hand, static entities are expected not to engage in frequent position changes, expressing continuous and fairly invariable communication availability around a fixed point in space as time passes \cite{nasrulin2018robust}. The act is, however, only completed with another type of entity from whom neither the relative staticity nor the relative dynamism frankly matters. These protocol parties are often external and asynchronous to the witnessing process, but they do effectively take a non-negligible part in incentivizing and giving significance to the witnessing act. 
-
-Concisely and in concrete terms, these location-proof arrangements expect the existence of a \emph{prover} that engages in any communication protocol with nearby participants, the \emph{witnesses}, with the goal of gathering a verifiable proof-of-location claim, to be later presented to a \emph{verifier}, therefore convincing it of one's existence within a geographical area at a given moment in the past \cite{dupin2018location}.
-
-\paragraph{Prover.} A prover is a dynamic entity, both in movement and availability terms, that is expected to be able to communicate with the witnesses to gather a proof of its location and to be later able to provide a location claim to the verifier. Communication with nearby witnesses is thought to happen wirelessly, using any short-range message transmission means. Provers are also expected to be associated with a verifiable but desirably private identity, often as a pseudonym.
-
-\paragraph{Witness.} A witness is adjunctly an entity that is expected to be able to communicate with the prover via the same short-range communication channel and to be able to provide it with a verifiable piece of location attestation. The witnesses are envisioned to seldomly change their absolute location and maintain a relatively stable neighbouring list of nearby witnesses. These references aim at attaining the figurative creation of coverage zones as strongly connected graphs that form the boundaries of the atomic units of a polygonal mesh. Witnesses are as well expected to be identified, usually by a pseudonym.
-
-\paragraph{Verifier.} A verifier is an external entity that is expected to be able to receive a location claim from a prover and to be able to verify its validity. Even though possible and predicted for trusted setups, in a trustless environment and with the general assurances of a permissionless protocol, verifiers shall not have the need to communicate directly with the witnesses. Verifiers' identity is also of no measurable importance for the protocol, as the interaction between the prover and the verifier is usually asynchronous and external to the witnessing process.
-
-\subsubsection{Adversary Models}
+\input{sections/prelude/proof-of-location}
 
 \subsection{Wireless Mesh Networks}
 
-The envisioned fourth industrial revolution has set the track for modern advancements in achieving a global web of pervasive connectivity between all sorts of machines \cite{akyildiz2005wireless, cilfone2019wireless}. New means of radio and wireless communication have been pushing for the technological heterogeneity of protocols, architectures, devices, and consequent performance levels in order to find their design suitability for different coverage or range scenarios, transmission or bandwidth rates \cite{sichitiu2005wireless}. Additionally, requirements for more complex, adaptable, and resilient topologies have captured broad academic and industry interest \cite{cilfone2019wireless}. 
-
-\begin{figure} [ht]
-  \begin{center}
-  \includegraphics[width=0.9\textwidth]{mesh-network-topology}
-  \caption{Different topologies of a computer network.}
-  \label{fig:mesh-network-topology}
-  \end{center}
-\end{figure}
-
-\TODO{Draw my own image for network topologies.}
-
-The development of new hardware architectures, protocols and applications started gaining momentum and branched their way forward to support the rising popularisation of Wireless Mesh Networks (WMNs). In mesh topologies (see Fig. \ref{fig:mesh-network-topology}), network nodes are directly and dynamically connected in a non-hierarchical way. This trait eventually allows for many-to-many communications between the devices to efficiently route data from a generic source to a generic destination. The infrastructure nodes that make up the mesh are expected to dynamically self-organize and configure themselves, resulting in beneficial distributed effects on the overall fault tolerance, ease of deployment, and workload allocation \cite{cilfone2019wireless, sichitiu2005wireless}. WMNs follow these principles with the particularity of being made up of radio nodes that communicate via any sort of wireless technology.
-
-Some of the most common wireless technologies that have been, throughout the years, ported to WMNs are IEEE 802.11, Bluetooth, IEEE 802.15, and LoRa. The first is the most popular and widely used, being the basis for the Wi-Fi standard, which, at the beginning of the last decade, saw an amendment that mainly targeted mesh networks, the IEEE 802.11s WLAN Mesh Standard \cite{hiertz2010ieee}. The novelty came with the introduction of routing mechanisms operating at the ISO/OSI Layer 2, allowing for compatible information delivery in the layers above. The dynamic establishment of a topology for IEEE 802.11s-based mesh networks relies on the phased transmission of beacon messages that allow for the discovery, synchronization, and maintenance of the links between the peers. IEEE 802.11s has a default routing protocol, the Hybrid Wireless Mesh Protocol (HWMP), which is based on a series of flooding procedures for both proactive and reactive path finding and selection \cite{bari2012performance}. This protocol is, however, not strictly enforced by the standard and has been replaced by other, more popular solutions. One notable example is the Better Approach To Mobile Ad-hoc Networks (B.A.T.M.A.N.) routing protocol.
-
-This thesis will explore the concept of WMNs and their potential for serving as the infrastructural topology that enables the relatively short-ranged wireless exchange of messages between the participants of a proof-of-location protocol. The following sections will present the B.A.T.M.A.N. routing protocol, OpenWRT and other relevant tools that will be later used to implement the proof of concept.
-
-\subsubsection{B.A.T.M.A.N. Routing Protocol}
-
-The Better Approach To Mobile Ad-hoc Networks (B.A.T.M.A.N.)\footnote{http://www.open-mesh.org/} is a proactive routing protocol for WMNs that operates not at the network layer but at the transport layer, by asserting the reliability of radio links using routing metrics and a distance-vector approach \cite{seither2011routing}. Its newer wireless version, \emph{batman-adv}, has gained traction and popularity and eventually made itself available in the Linux kernel.
-
-Route discovery is preemptively replaced with neighbour discovery, and each infrastructural node is instructed to calculate its potential best next-hop, significantly reducing the overhead of requiring each peer to be aware of the whole network topology. Its version V introduced a throughput metric to evaluate the links' quality and routing choices, replacing the version IV packet loss-based metric, deemed unsuitable for larger network sizes \cite{seither2011routing}.
-
-\begin{figure} [ht]
-  \begin{center}
-  \includegraphics[width=0.9\textwidth]{batman-adv-ogmv2}
-  \caption{OriGinator Message version 2 (OGMv2) packet format \cite{cilfone2019wireless,open-mesh-ogmv2}.}
-  \label{fig:batman-adv-ogmv2}
-  \end{center}
-\end{figure}
-
-The discovery of neighbouring nodes is accomplished by broadcasting OriGinator Messages (OGMv2, see Fig. \ref{fig:batman-adv-ogmv2}), featuring a collision avoidance delay mechanism, detection of new and duplicate messages, and other fields for throughput measurement and gateway discovery \cite{cilfone2019wireless}. Hence, the OGM flooding protocol enables mesh routing procedures that, simultaneously but independently, allow for estimating the quality of the individual links. Additionally, the protocol enables OGM aggregations as an effort to reduce the overhead of sending many short-sized frames. Nevertheless, there is still a quest for optimizations that would allow for more efficient use of multiple interfaces. An implementation of a subset of the Internet Control Message Protocol (ICMP) was also made available, allowing, for instance, the use of the \emph{ping} command to test the connectivity between nodes \cite{seither2011routing}.
-
-\subsubsection{OpenWRT, QEMU, and Raspberry Pis}
+\input{sections/prelude/mesh-networks}
 
 \subsection{Permissionless Consensus}
 
-\subsubsection{Proof-of-Work and Proof-of-Stake}
-
-\subsubsection{Proof-of-X}
+\input{sections/prelude/permissionless-consensus}
 
 \subsection{Title of Subsection 2} 
 

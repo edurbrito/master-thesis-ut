@@ -15,26 +15,26 @@
 \contentsline {subsubsection}{\numberline {2.2.1}B.A.T.M.A.N. Routing Protocol}{10}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}OpenWRT, QEMU, and Raspberry Pis}{12}{subsubsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.3}Permissionless Consensus}{12}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Proof-of-Work and Proof-of-Stake}{12}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Proof-of-X}{12}{subsubsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.4}Title of Subsection 2}{12}{subsection.2.4}%
-\contentsline {paragraph}{Type rules for integers.}{12}{section*.20}%
-\contentsline {paragraph}{Type rules for rational numbers.}{12}{section*.21}%
-\contentsline {subsection}{\numberline {2.5}How to use references}{12}{subsection.2.5}%
-\contentsline {paragraph}{Cross-references to figures, tables and other document elements.}{12}{section*.22}%
-\contentsline {paragraph}{Citations.}{12}{section*.23}%
-\contentsline {section}{\numberline {3}How to add figures and pictures to your thesis}{14}{section.3}%
-\contentsline {section}{\numberline {4}Other Ways to Represent Data}{17}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Tables}{17}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Lists}{17}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Math mode}{17}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}algorithm2e}{17}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Pseudocode}{17}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Frame Around Information}{17}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Conclusion}{19}{section.5}%
-\contentsline {section}{References}{20}{section*.34}%
-\contentsline {section}{Appendix}{21}{section*.35}%
-\contentsline {subsection}{I. Glossary}{21}{section*.36}%
+\contentsline {subsubsection}{\numberline {2.3.1}Proof-of-Work and Proof-of-Stake}{13}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Proof-of-X}{14}{subsubsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.4}Title of Subsection 2}{14}{subsection.2.4}%
+\contentsline {paragraph}{Type rules for integers.}{14}{section*.20}%
+\contentsline {paragraph}{Type rules for rational numbers.}{14}{section*.21}%
+\contentsline {subsection}{\numberline {2.5}How to use references}{14}{subsection.2.5}%
+\contentsline {paragraph}{Cross-references to figures, tables and other document elements.}{14}{section*.22}%
+\contentsline {paragraph}{Citations.}{15}{section*.23}%
+\contentsline {section}{\numberline {3}How to add figures and pictures to your thesis}{16}{section.3}%
+\contentsline {section}{\numberline {4}Other Ways to Represent Data}{19}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Tables}{19}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Lists}{19}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Math mode}{19}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}algorithm2e}{19}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Pseudocode}{19}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Frame Around Information}{19}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Conclusion}{21}{section.5}%
+\contentsline {section}{References}{23}{section*.34}%
+\contentsline {section}{Appendix}{24}{section*.35}%
+\contentsline {subsection}{I. Glossary}{24}{section*.36}%
 \babel@toc {english}{}\relax 
-\contentsline {subsection}{II. Licence}{22}{section*.37}%
+\contentsline {subsection}{II. Licence}{25}{section*.37}%
 \babel@toc {english}{}\relax 

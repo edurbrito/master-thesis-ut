@@ -1,0 +1,41 @@
+The envisioned fourth industrial revolution has set the track for modern advancements in achieving a global web of pervasive connectivity between all sorts of machines \cite{akyildiz2005wireless, cilfone2019wireless}. New means of radio and wireless communication have been pushing for the technological heterogeneity of protocols, architectures, devices, and consequent performance levels in order to find their design suitability for different coverage or range scenarios, transmission or bandwidth rates \cite{sichitiu2005wireless}. Additionally, requirements for more complex, adaptable, and resilient topologies have captured broad interest, in both academic and industry domains \cite{cilfone2019wireless}. 
+
+\begin{figure} [ht]
+  \begin{center}
+  \includegraphics[width=0.9\textwidth]{mesh-network-topology}
+  \caption{Different topologies of a computer network.}
+  \label{fig:mesh-network-topology}
+  \end{center}
+\end{figure}
+
+\TODO{Draw my own image for network topologies.}
+
+The development of new hardware architectures, protocols and applications started gaining momentum and branched their way forward to support the rising popularisation of Wireless Mesh Networks (WMNs). In mesh topologies (see Fig. \ref{fig:mesh-network-topology}), network nodes are directly and dynamically connected in a non-hierarchical way. This trait eventually allows for many-to-many communications between the devices to efficiently route data from a generic source to a generic destination. The infrastructure nodes that make up the mesh are expected to dynamically self-organize and configure themselves, resulting in beneficial distributed effects on the overall fault tolerance, ease of deployment, and workload allocation \cite{cilfone2019wireless, sichitiu2005wireless}. WMNs follow these principles with the particularity of being made up of radio nodes that communicate via any sort of wireless technology.
+
+Some of the most common wireless technologies that have been, throughout the years, ported to WMNs are IEEE 802.11, Bluetooth, IEEE 802.15, and LoRa. The first is the most popular and widely used, being the basis for the Wi-Fi standard, which, at the beginning of the last decade, saw an amendment that mainly targeted mesh networks, the IEEE 802.11s WLAN Mesh Standard \cite{hiertz2010ieee}. The novelty came with the introduction of routing mechanisms operating at the ISO/OSI Layer 2, allowing for compatible information delivery in the layers above. The dynamic establishment of a topology for IEEE 802.11s-based mesh networks relies on the phased transmission of beacon messages that allow for the discovery, synchronization, and maintenance of the links between the peers. IEEE 802.11s has a default routing protocol, the Hybrid Wireless Mesh Protocol (HWMP), which is based on a series of flooding procedures for both proactive and reactive path finding and selection \cite{bari2012performance}. This protocol is, however, not strictly enforced by the standard and has been replaced by other, more popular solutions. One notable example is the Better Approach To Mobile Ad-hoc Networks (B.A.T.M.A.N.) routing protocol.
+
+This thesis will explore the concept of WMNs and their potential for serving as the infrastructural topology that enables the relatively short-ranged wireless exchange of messages between the participants of a proof-of-location protocol. The following sections will present the B.A.T.M.A.N. routing protocol, OpenWRT and other relevant tools that will be later used to implement the proof of concept.
+
+\subsubsection{B.A.T.M.A.N. Routing Protocol}
+
+The Better Approach To Mobile Ad-hoc Networks (B.A.T.M.A.N.)\footnote{http://www.open-mesh.org/} is a proactive routing protocol for WMNs that operates not at the network layer but at the data link layer, by asserting the reliability of radio links using routing metrics and a distance-vector approach \cite{seither2011routing}. Its newer wireless version, \emph{batman-adv}, has gained traction and popularity and eventually made itself available in the Linux kernel.
+
+Route discovery is preemptively replaced with neighbour discovery, and each infrastructural node is instructed to calculate its potential best next-hop, significantly reducing the overhead of requiring each peer to be aware of the whole network topology. Its version V introduced a throughput metric to evaluate the links' quality and routing choices, replacing the version IV packet loss-based metric, deemed unsuitable for larger network sizes \cite{seither2011routing}.
+
+\begin{figure} [ht]
+  \begin{center}
+  \includegraphics[width=0.9\textwidth]{batman-adv-ogmv2}
+  \caption{OriGinator Message version 2 (OGMv2) packet format \cite{cilfone2019wireless,open-mesh-ogmv2}.}
+  \label{fig:batman-adv-ogmv2}
+  \end{center}
+\end{figure}
+
+The discovery of neighbouring nodes is accomplished by broadcasting OriGinator Messages (OGMv2, see Fig. \ref{fig:batman-adv-ogmv2}), featuring a collision avoidance delay mechanism, the detection of new or duplicate messages, and other fields for throughput measurement and gateway discovery \cite{cilfone2019wireless}. Hence, the OGM flooding protocol enables mesh routing procedures that, simultaneously but independently, allow for estimating the quality of the individual links. Additionally, the protocol enables OGM aggregations as an effort to reduce the overhead of sending many short-sized frames. Nevertheless, there is still a quest for optimizations that would allow for more efficient use of multiple interfaces. An implementation of a subset of the Internet Control Message Protocol (ICMP) was also made available, allowing, for instance, the use of the \emph{ping} command to test the connectivity between nodes \cite{seither2011routing}.
+
+Building on the previous, the B.A.T.M.A.N. routing protocol has been, through multiple initiatives, successfully blended into the OpenWRT project, which will also be employed in the proof of concept. The following section will present OpenWRT and other relatable tools.
+
+\subsubsection{OpenWRT, QEMU, and Raspberry Pis}
+
+The OpenWRT project \footnote{https://openwrt.org/} is a Linux distribution for embedded devices, which, in the context of this thesis, will serve as the host operating system for running the proof of concept solution. The project is based on the Linux kernel, encapsulating several of its libraries and packages, and is designed to be used on devices with limited resources. OpenWRT features not only a modular architecture powered by a writable root filesystem and automation build tools with integrated cross-compiler toolchain, but also a package management system that allows for the installation of additional software. The project also provides extensive configuration options for networking capabilities, including enabling mesh networking support through the B.A.T.M.A.N. routing protocol. 
+
+To facilitate the development and testing of the proof of concept, the QEMU\footnote{https://www.qemu.org/} emulator will be used. QEMU is a generic and open-source machine virtualizer that, through its versatile set of features, allows for the full-system emulation of a wide range of hardware and software. The emulator will run the OpenWRT-generated images and spawn multiple virtual machines. These machines will simulate the various protocol participants by establishing a mesh network with the help of the virtualizer network emulation tools. The intention is to ease and accelerate the development process by allowing for testing the proof of concept in a controlled environment, without the management, maintenance and deployment hustle of physical devices. Later, the solution will eventually be deployed on a set of Raspberry Pis\footnote{https://www.raspberrypi.org/}, the most widely used single-board computers for developing IoT solutions.
