@@ -375,43 +375,31 @@ This section introduces not only the underlying concepts that sustent the work, 
 
 \input{sections/prelude/permissionless-consensus}
 
-\subsection{Title of Subsection 2} 
+% \subsection{How to use references} \label{sec:using_ref}
 
-Rule: If you divide the text into subsections (or subsubsections) then there has to be at least two of them, otherwise do not create any. 
-
-Tip: You can also use paragraphs, e.g.
-\paragraph{Type rules for integers.} Some text ...
-
-\paragraph{Type rules for rational numbers.} Some text here too...
-
-
-
-
-\subsection{How to use references} \label{sec:using_ref}
-
-\paragraph{Cross-references to figures, tables and other document elements.}
-LaTeX  internally numbers all kind of objects that have sequence numbers:
-\begin{itemize}
-\item chapters, sections, subsections;
-\item figures, tables, algorithms;
-\item equations, equation arrays.
-\end{itemize}
-To reference them automatically, you have to generate a label using \texttt{$\backslash$label\{some-name\}} just after the object that has the number inside. Usually, labels of different objects are split into different namespaces by adding dedicated prefix, such as \texttt{sec:}, \texttt{fig:}. To use the corresponding reference, you must use command \texttt{$\backslash$ref} or \texttt{$\backslash$eqref}. For instance, we can reference this subsection by calling Section~\ref{sec:using_ref}. Note that there should be a nonbreakable space \texttt{\~} between the name of the object and the reference so that they would not appear on different lines (does not work in Estonian).          
+% \paragraph{Cross-references to figures, tables and other document elements.}
+% LaTeX  internally numbers all kind of objects that have sequence numbers:
+% \begin{itemize}
+% \item chapters, sections, subsections;
+% \item figures, tables, algorithms;
+% \item equations, equation arrays.
+% \end{itemize}
+% To reference them automatically, you have to generate a label using \texttt{$\backslash$label\{some-name\}} just after the object that has the number inside. Usually, labels of different objects are split into different namespaces by adding dedicated prefix, such as \texttt{sec:}, \texttt{fig:}. To use the corresponding reference, you must use command \texttt{$\backslash$ref} or \texttt{$\backslash$eqref}. For instance, we can reference this subsection by calling Section~\ref{sec:using_ref}. Note that there should be a nonbreakable space \texttt{\~} between the name of the object and the reference so that they would not appear on different lines (does not work in Estonian).          
 
 
 
-\paragraph{Citations.}
-Usually, you also want to reference articles, webpages, tools or programs or books. For that you should use citations and references. The system is similar to the cross-referencing system in LaTeX. For each reference you must assign a unique label. Again, there are many naming schemes for labels. However, as you have a short document anything works. To reference to a particular source you must use \texttt{$\backslash$cite\{label\}} or \texttt{$\backslash$cite[page]\{label\}}. 
+% \paragraph{Citations.}
+% Usually, you also want to reference articles, webpages, tools or programs or books. For that you should use citations and references. The system is similar to the cross-referencing system in LaTeX. For each reference you must assign a unique label. Again, there are many naming schemes for labels. However, as you have a short document anything works. To reference to a particular source you must use \texttt{$\backslash$cite\{label\}} or \texttt{$\backslash$cite[page]\{label\}}. 
 
-References themselves can be part of a LaTeX source file. For that you need to define a bibliography section. However, this approach is really uncommon. It is much more easier to use BibTeX to synthesise the right reference form for you. For that you must use two commands in the LaTeX source
-\begin{itemize}
-\item $\backslash$bibliographystyle\{alpha\} or $\backslash$bibliographystyle\{plain\}
-\item $\backslash$bibliography\{file-name\}
-\end{itemize}
-The first command determines whether the references are numbered by letter-number combinations or by cryptic numbers. It is more common to use \texttt{alpha} style. The second command determines the file containing the bibliographic entries. The file should end with \texttt{bib} extension. Each reference there is in specific form. The simplest way to avoid all technicalities is to use graphical frontend  Jabref (\url{http://jabref.sourceforge.net/}) to manage references. Another alternative is to use DBLP database of references and copy BibTeX entries directly form there.   
+% References themselves can be part of a LaTeX source file. For that you need to define a bibliography section. However, this approach is really uncommon. It is much more easier to use BibTeX to synthesise the right reference form for you. For that you must use two commands in the LaTeX source
+% \begin{itemize}
+% \item $\backslash$bibliographystyle\{alpha\} or $\backslash$bibliographystyle\{plain\}
+% \item $\backslash$bibliography\{file-name\}
+% \end{itemize}
+% The first command determines whether the references are numbered by letter-number combinations or by cryptic numbers. It is more common to use \texttt{alpha} style. The second command determines the file containing the bibliographic entries. The file should end with \texttt{bib} extension. Each reference there is in specific form. The simplest way to avoid all technicalities is to use graphical frontend  Jabref (\url{http://jabref.sourceforge.net/}) to manage references. Another alternative is to use DBLP database of references and copy BibTeX entries directly form there.   
     
    
-The following paragraph shows how references can be used. Game-based proving is a way to analyse security of a cryptographic protocol~\cite{GameB_1, GameB_2}. There are automatic provers, such as {CertiCrypt\-}~\cite{certicrypt} and ProVerif~\cite{proVerif}.
+% The following paragraph shows how references can be used. Game-based proving is a way to analyse security of a cryptographic protocol~\cite{GameB_1, GameB_2}. There are automatic provers, such as {CertiCrypt\-}~\cite{certicrypt} and ProVerif~\cite{proVerif}.
 
 
 
