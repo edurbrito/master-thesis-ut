@@ -10,9 +10,9 @@
 \contentsline {paragraph}{Prover.}{8}{section*.13}%
 \contentsline {paragraph}{Witness.}{8}{section*.14}%
 \contentsline {paragraph}{Verifier.}{8}{section*.15}%
-\contentsline {subsubsection}{\numberline {2.1.2}Common Threat Models}{8}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.2}Common Threat Models}{9}{subsubsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.2}Wireless Mesh Networks}{9}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}B.A.T.M.A.N. Routing Protocol}{10}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1}B.A.T.M.A.N. Routing Protocol}{11}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}OpenWRT, QEMU, and Raspberry Pis}{12}{subsubsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.3}Permissionless Consensus}{12}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}Proof-of-X}{13}{subsubsection.2.3.1}%
