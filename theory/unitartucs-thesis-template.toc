@@ -3,32 +3,23 @@
 \babel@toc {english}{}\relax 
 \babel@toc {estonian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {1}Introduction}{6}{section.1}%
-\contentsline {section}{\numberline {2}Prelude}{8}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Proof-of-Location}{8}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Parties Involved}{8}{subsubsection.2.1.1}%
-\contentsline {paragraph}{Prover.}{8}{section*.14}%
-\contentsline {paragraph}{Witness.}{8}{section*.15}%
-\contentsline {paragraph}{Verifier.}{9}{section*.16}%
-\contentsline {subsubsection}{\numberline {2.1.2}Adversary Models}{9}{subsubsection.2.1.2}%
+\contentsline {section}{\numberline {1}Introduction}{5}{section.1}%
+\contentsline {section}{\numberline {2}Prelude}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Proof-of-Location}{7}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Parties Involved}{7}{subsubsection.2.1.1}%
+\contentsline {paragraph}{Prover.}{8}{section*.13}%
+\contentsline {paragraph}{Witness.}{8}{section*.14}%
+\contentsline {paragraph}{Verifier.}{8}{section*.15}%
+\contentsline {subsubsection}{\numberline {2.1.2}Common Threat Models}{8}{subsubsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.2}Wireless Mesh Networks}{9}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}B.A.T.M.A.N. Routing Protocol}{10}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}OpenWRT, QEMU, and Raspberry Pis}{12}{subsubsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.3}Permissionless Consensus}{12}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Proof-of-Work and Proof-of-Stake}{13}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Proof-of-X}{14}{subsubsection.2.3.2}%
-\contentsline {section}{\numberline {3}How to add figures and pictures to your thesis}{17}{section.3}%
-\contentsline {section}{\numberline {4}Other Ways to Represent Data}{20}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Tables}{20}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Lists}{20}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Math mode}{20}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}algorithm2e}{20}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Pseudocode}{20}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Frame Around Information}{20}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Conclusion}{22}{section.5}%
-\contentsline {section}{References}{24}{section*.31}%
-\contentsline {section}{Appendix}{25}{section*.32}%
-\contentsline {subsection}{I. Glossary}{25}{section*.33}%
+\contentsline {subsubsection}{\numberline {2.3.1}Proof-of-X}{13}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Proof-of-Work and Proof-of-Stake}{14}{subsubsection.2.3.2}%
+\contentsline {section}{References}{19}{section*.20}%
+\contentsline {section}{Appendix}{20}{section*.21}%
+\contentsline {subsection}{I. Glossary}{20}{section*.22}%
 \babel@toc {english}{}\relax 
-\contentsline {subsection}{II. Licence}{26}{section*.34}%
+\contentsline {subsection}{II. Licence}{21}{section*.23}%
 \babel@toc {english}{}\relax 

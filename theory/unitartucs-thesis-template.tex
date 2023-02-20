@@ -60,6 +60,7 @@
   \renewcommand{\appendixname}{Lisad}%
 }
 
+\usepackage{cite}
 % If you have problems with Estonian keywords in the bibliography
 %\usepackage{biblatex}
 %\usepackage[backend=biber]{biblatex}
@@ -111,7 +112,7 @@
 % Since the thesis in article format we must define \chapter for
 % the package algorithm2e (otherwise obscure errors occur) 
 \let\chapter\section
-\usepackage[ruled, vlined, linesnumbered]{algorithm2e}
+\usepackage[ruled, vlined, linesnumbered, procnumbered]{algorithm2e}
 
 % Fix a  set of keywords which you use inside algorithms
 \SetKw{True}{true}
@@ -348,8 +349,8 @@ the paper is significantly enhanced by their inclusion.}
 
 
 % Remember to remove this from the final thesis version
-\newpage
-\listoftodos[Unsolved issues]
+% \newpage
+% \listoftodos[Unsolved issues]
 % END OF TODO PAGE 
 
 
@@ -403,206 +404,206 @@ This section introduces not only the underlying concepts that sustent the work, 
 
 
 
-\newpage
-\section{How to add figures and pictures to your thesis}
+% \newpage
+% \section{How to add figures and pictures to your thesis}
 
 
-Here are a few examples of how to add figures or pictures to your thesis (see Figures~\ref{fig:fnCompModel}, \ref{fig:game-based_proofs}, \ref{fig:proveit_screenshot}).
+% Here are a few examples of how to add figures or pictures to your thesis (see Figures~\ref{fig:fnCompModel}, \ref{fig:game-based_proofs}, \ref{fig:proveit_screenshot}).
 
-Rule: All the figures, tables and extras in the thesis have to be referred to somewhere in the text.
-
-
-\begin{figure} [ht] %try to place the figure here (next option top of the page) 
-\begin{center}
-\includegraphics[width=0.8\textwidth]{computational_model_function}
-\caption{The title of the Figure.}
-\label{fig:fnCompModel}
-\end{center}
-\end{figure}
+% Rule: All the figures, tables and extras in the thesis have to be referred to somewhere in the text.
 
 
-
-\begin{figure} [!ht] %if [h] doesn't work, we can force with !
-\begin{center}
-\includegraphics[width=\textwidth]{game-based_proofs}
-\caption{Refer if the figure is not yours~\cite{kamm12}.}
-\label{fig:game-based_proofs}
-\end{center}
-\end{figure}
-
-
-\begin{figure} [p]
-\begin{center}
-\includegraphics[width=\textwidth]{proveit_screenshot}
-\caption{Screenshot of \proveit.}
-\label{fig:proveit_screenshot}
-\end{center}
-\end{figure}
-
-Tip: If you add a screenshot then labeling the parts might help make the text more understandable (panel C vs bottom left part), e.g.
-
-
-\begin{figure} [htbp]
-\begin{tabular}{c c}
-%
-\begin{minipage}{0.45\textwidth}
-\includegraphics[width=\textwidth]{LCA_2_solutions}
-\end{minipage}
-%
-&
-\begin{minipage}{0.55\textwidth}
-\centering
-\begin{tabular}{ l | l |}
-	Node & Decendants \\ \hline
-  1 & 2, 3, 4 \\ \hline
-  2 & 3, 4 \\ \hline
-  3 & \\ \hline
-  4 & \\ \hline
-  5 & 3, 4, 6, 7 \\ \hline
-  6 & 4 \\ \hline
-  7 & 3 \\  \hline
-  8 & 3, 4, 5, 6, 7\\ \hline
-  9 & 3, 4, 5, 6, 7\\ \hline
-\end{tabular}
-\end{minipage}
-\end{tabular}
-%
-\caption{Example how to put two figures parallel to each other.}
-\label{fig:LCA_2_solutions}
-\end{figure}
-
-
-Example: A screenshot of \proveit can be seen on Figure~\ref{fig:proveit_screenshot}. The user first enters the pseudocode of the initial game in panel B. \proveit also keeps track of all the previous games showing the progress on a graph seen in panel A.
-
-There are two figures side by side on Figure~\ref{fig:LCA_2_solutions}.
+% \begin{figure} [ht] %try to place the figure here (next option top of the page) 
+% \begin{center}
+% \includegraphics[width=0.8\textwidth]{computational_model_function}
+% \caption{The title of the Figure.}
+% \label{fig:fnCompModel}
+% \end{center}
+% \end{figure}
 
 
 
-\clearpage %if newpage doesn't work
-\section{Other Ways to Represent Data}
-
-\subsection{Tables}
-
-\begin{table}[h]
-\centering
-\caption{Statements in the \proveit language.}
-\begin{tabular}{| l | l |}
-	\hline
-	\bf{Statement} & \bf{Typeset Example} \\
-	\hline
-	assignment & $a := 5 + b$ \\
-	\hline
-	uniform choice & $m <- M$ \\
-	\hline
-	function signature & $f : K \times M -> L$\\
-	\hline
-\end{tabular}
-\label{tab:statements}
-\end{table}
+% \begin{figure} [!ht] %if [h] doesn't work, we can force with !
+% \begin{center}
+% \includegraphics[width=\textwidth]{game-based_proofs}
+% \caption{Refer if the figure is not yours~\cite{kamm12}.}
+% \label{fig:game-based_proofs}
+% \end{center}
+% \end{figure}
 
 
-\subsection{Lists}
+% \begin{figure} [p]
+% \begin{center}
+% \includegraphics[width=\textwidth]{proveit_screenshot}
+% \caption{Screenshot of \proveit.}
+% \label{fig:proveit_screenshot}
+% \end{center}
+% \end{figure}
 
-Numbered list example:
-\begin{enumerate}
-	\item item one; 
-	\item item two;
-	\item item three.
-\end{enumerate} 
-
-\subsection{Math mode}
-Example:
-\begin{equation}
-a + b = c + d
-\end{equation}
-Aligning:
-\begin{align*}
-	a &= 5 \\
-	b + c &= a \\
-	a -2*3 &= 5/4
-\end{align*}
-Hint: Variables or equations in text are separated with \$ sign, e.g. $a$, $x - y$.
-
-% \paragraph{Inference Rules}
-% \[ 
-% 	\inference[addition]{x : T & y : T}{x + y : T} 
-% \]
-% Bigger example:
-% \[
-% \inference[assign]{c := a + b & 
-% 	\inference[addG]{a : \typeRat & 
-% 		\inference[var]{b : \typeInt & \typeInt \subseteq \typeRat}{b : \typeRat}
-% 		}{a + b : \typeRat}
-% 	}{c : \typeRat}
-% \]
+% Tip: If you add a screenshot then labeling the parts might help make the text more understandable (panel C vs bottom left part), e.g.
 
 
-\subsection{algorithm2e}
+% \begin{figure} [htbp]
+% \begin{tabular}{c c}
+% %
+% \begin{minipage}{0.45\textwidth}
+% \includegraphics[width=\textwidth]{LCA_2_solutions}
+% \end{minipage}
+% %
+% &
+% \begin{minipage}{0.55\textwidth}
+% \centering
+% \begin{tabular}{ l | l |}
+% 	Node & Decendants \\ \hline
+%   1 & 2, 3, 4 \\ \hline
+%   2 & 3, 4 \\ \hline
+%   3 & \\ \hline
+%   4 & \\ \hline
+%   5 & 3, 4, 6, 7 \\ \hline
+%   6 & 4 \\ \hline
+%   7 & 3 \\  \hline
+%   8 & 3, 4, 5, 6, 7\\ \hline
+%   9 & 3, 4, 5, 6, 7\\ \hline
+% \end{tabular}
+% \end{minipage}
+% \end{tabular}
+% %
+% \caption{Example how to put two figures parallel to each other.}
+% \label{fig:LCA_2_solutions}
+% \end{figure}
 
-\begin{algorithm} [!h]
-	\caption{typeChecking} \label{alg:typeChecking}
-	\KwIn{Abstract syntax tree}
-	\KwResult{Type checking result; In addition, type table \typeF{type\_G} for global variables, \typeF{game} for the main game and \typeF{fun} for each $fun \in F$}
-	\SetKwData{s}{s}
-	\BlankLine
+
+% Example: A screenshot of \proveit can be seen on Figure~\ref{fig:proveit_screenshot}. The user first enters the pseudocode of the initial game in panel B. \proveit also keeps track of all the previous games showing the progress on a graph seen in panel A.
+
+% There are two figures side by side on Figure~\ref{fig:LCA_2_solutions}.
+
+
+
+% \clearpage %if newpage doesn't work
+% \section{Other Ways to Represent Data}
+
+% \subsection{Tables}
+
+% \begin{table}[h]
+% \centering
+% \caption{Statements in the \proveit language.}
+% \begin{tabular}{| l | l |}
+% 	\hline
+% 	\bf{Statement} & \bf{Typeset Example} \\
+% 	\hline
+% 	assignment & $a := 5 + b$ \\
+% 	\hline
+% 	uniform choice & $m <- M$ \\
+% 	\hline
+% 	function signature & $f : K \times M -> L$\\
+% 	\hline
+% \end{tabular}
+% \label{tab:statements}
+% \end{table}
+
+
+% \subsection{Lists}
+
+% Numbered list example:
+% \begin{enumerate}
+% 	\item item one; 
+% 	\item item two;
+% 	\item item three.
+% \end{enumerate} 
+
+% \subsection{Math mode}
+% Example:
+% \begin{equation}
+% a + b = c + d
+% \end{equation}
+% Aligning:
+% \begin{align*}
+% 	a &= 5 \\
+% 	b + c &= a \\
+% 	a -2*3 &= 5/4
+% \end{align*}
+% Hint: Variables or equations in text are separated with \$ sign, e.g. $a$, $x - y$.
+
+% % \paragraph{Inference Rules}
+% % \[ 
+% % 	\inference[addition]{x : T & y : T}{x + y : T} 
+% % \]
+% % Bigger example:
+% % \[
+% % \inference[assign]{c := a + b & 
+% % 	\inference[addG]{a : \typeRat & 
+% % 		\inference[var]{b : \typeInt & \typeInt \subseteq \typeRat}{b : \typeRat}
+% % 		}{a + b : \typeRat}
+% % 	}{c : \typeRat}
+% % \]
+
+
+% \subsection{algorithm2e}
+
+% \begin{algorithm} [!h]
+% 	\caption{typeChecking} \label{alg:typeChecking}
+% 	\KwIn{Abstract syntax tree}
+% 	\KwResult{Type checking result; In addition, type table \typeF{type\_G} for global variables, \typeF{game} for the main game and \typeF{fun} for each $fun \in F$}
+% 	\SetKwData{s}{s}
+% 	\BlankLine
 	
-	\While{something changed in last cycle}{
-		\lForEach{global statement \s} {
-			\parseStatement{\s, \typeF{type\_G}}\;
-		}
-		\ForEach{function $fun$} {
-		\lForEach{statement \s in $fun$} {
-			\parseStatement{\s, \typeF{fun}}\;
-		}
-		}
-		\lForEach{statement \s in game} {
-			\parseStatement{\s, \typeF{game}}\;
-		}
-	}
-	%\eIf{error messages were found}{\Return \False\;}{\Return \True\;}
-\end{algorithm}
+% 	\While{something changed in last cycle}{
+% 		\lForEach{global statement \s} {
+% 			\parseStatement{\s, \typeF{type\_G}}\;
+% 		}
+% 		\ForEach{function $fun$} {
+% 		\lForEach{statement \s in $fun$} {
+% 			\parseStatement{\s, \typeF{fun}}\;
+% 		}
+% 		}
+% 		\lForEach{statement \s in game} {
+% 			\parseStatement{\s, \typeF{game}}\;
+% 		}
+% 	}
+% 	%\eIf{error messages were found}{\Return \False\;}{\Return \True\;}
+% \end{algorithm}
 
-\subsection{Pseudocode}
+% \subsection{Pseudocode}
 
-\begin{figure} [htb]
-\begin{lstlisting}
-expression
-  : NUMBER
-  | VARIABLE
-  | '+' expression
-  | expression '+' expression
-  | expression '*' expression
-  | function_name '(' parameters ')'
-  | '(' expression ')'
-\end{lstlisting}
-\caption{Grammar of arithmetic expressions.}
-\label{fig:parser_exp}
-\end{figure}
+% \begin{figure} [htb]
+% \begin{lstlisting}
+% expression
+%   : NUMBER
+%   | VARIABLE
+%   | '+' expression
+%   | expression '+' expression
+%   | expression '*' expression
+%   | function_name '(' parameters ')'
+%   | '(' expression ')'
+% \end{lstlisting}
+% \caption{Grammar of arithmetic expressions.}
+% \label{fig:parser_exp}
+% \end{figure}
 
-\subsection{Frame Around Information}
+% \subsection{Frame Around Information}
 
-Tip: We can use minipage to create a frame around some important information.
-\begin{figure} [h]
-\frame{
-\begin{minipage}{\textwidth}
-\begin{enumerate}
-	\item integer division ($\opDiv$) -- only usable between \typeInt types
-	\item remainder ($\%$) -- only usable between \typeInt types
-\end{enumerate}
-\end{minipage}
-}
-\caption{Arithmetic operations in \proveit revisited.}
-\label{fig:aritmOp_revisit}
-\end{figure}
+% Tip: We can use minipage to create a frame around some important information.
+% \begin{figure} [h]
+% \frame{
+% \begin{minipage}{\textwidth}
+% \begin{enumerate}
+% 	\item integer division ($\opDiv$) -- only usable between \typeInt types
+% 	\item remainder ($\%$) -- only usable between \typeInt types
+% \end{enumerate}
+% \end{minipage}
+% }
+% \caption{Arithmetic operations in \proveit revisited.}
+% \label{fig:aritmOp_revisit}
+% \end{figure}
 
 
 
-\clearpage
-\section{Conclusion}
+% \clearpage
+% \section{Conclusion}
 
-\TODO{what did you do?} 
-\TODO{What are the results?}
-\TODO{future work?}
+% \TODO{what did you do?} 
+% \TODO{What are the results?}
+% \TODO{future work?}
 
 \newpage
 
