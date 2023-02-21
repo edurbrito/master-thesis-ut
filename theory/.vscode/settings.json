@@ -2,5 +2,6 @@
     "editor.wordWrap": "on",
     "cSpell.enableFiletypes": [
         "tex"
-    ]
+    ],
+    "ltex.language": "en-GB"
 }
