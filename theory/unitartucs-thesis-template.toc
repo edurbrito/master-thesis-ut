@@ -4,7 +4,7 @@
 \babel@toc {estonian}{}\relax 
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Introduction}{5}{section.1}%
-\contentsline {section}{\numberline {2}Prelude}{7}{section.2}%
+\contentsline {section}{\numberline {2}Background}{7}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Proof-of-Location}{7}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Parties Involved}{7}{subsubsection.2.1.1}%
 \contentsline {paragraph}{Prover.}{8}{section*.13}%
@@ -16,7 +16,7 @@
 \contentsline {subsubsection}{\numberline {2.2.2}OpenWRT, QEMU, and Raspberry Pis}{12}{subsubsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.3}Permissionless Consensus}{12}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}Proof-of-X}{13}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Proof-of-Work and Proof-of-Stake}{14}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2}Proof-of-Work and Proof-of-Stake}{15}{subsubsection.2.3.2}%
 \contentsline {section}{References}{19}{section*.20}%
 \contentsline {section}{Appendix}{20}{section*.21}%
 \contentsline {subsection}{I. Glossary}{20}{section*.22}%
