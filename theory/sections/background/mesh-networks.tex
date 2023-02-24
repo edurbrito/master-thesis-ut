@@ -2,13 +2,11 @@ The envisioned fourth industrial revolution has set the track for modern advance
 
 \begin{figure} [ht]
   \begin{center}
-  \includegraphics[width=0.9\textwidth]{mesh-network-topology}
-  \caption{Different topologies of a computer network.}
+  \includegraphics[width=0.9\textwidth]{network-topologies.pdf}
+  \caption{Examples of different topologies of a computer network. Starting on the left, the star topology shows all the nodes connected to a central hub. To the right, examples of mesh topologies depict the direct and decentralized connections between the nodes.}
   \label{fig:mesh-network-topology}
   \end{center}
 \end{figure}
-
-\TODO{Draw my own image for network topologies.}
 
 The development of new hardware architectures, protocols and applications started gaining momentum and branched their way forward to support the popularisation of Wireless Mesh Networks (WMNs). In mesh topologies (see Fig. \ref{fig:mesh-network-topology}), network nodes are directly and dynamically connected in a non-hierarchical way. This trait eventually allows for many-to-many communications between the devices to efficiently route data from a generic source to a generic destination. The infrastructure nodes that make up the mesh are expected to dynamically self-organize and configure themselves, resulting in beneficial distributed effects on the overall fault tolerance, ease of deployment, and workload allocation \cite{cilfone2019wireless, sichitiu2005wireless}. WMNs follow these principles with the particularity of being made up of radio nodes that communicate via any sort of wireless technology.
 
@@ -18,13 +16,13 @@ This thesis will explore the concept of WMNs and their potential for serving as 
 
 \subsubsection{B.A.T.M.A.N. Routing Protocol}
 
-The Better Approach To Mobile Ad-hoc Networks (B.A.T.M.A.N.)\footnote{http://www.open-mesh.org/} is a proactive routing protocol for WMNs that operates not at the network layer but at the data link layer, asserting the reliability of radio links using routing metrics and a distance-vector approach \cite{seither2011routing}. Its newer wireless version, \emph{batman-adv}, has gained traction and popularity and eventually made itself available in the Linux kernel.
+The Better Approach To Mobile Ad-hoc Networks (B.A.T.M.A.N.)\footnote{\url{http://www.open-mesh.org/}} is a proactive routing protocol for WMNs that operates not at the network layer but at the data link layer, asserting the reliability of radio links using routing metrics and a distance-vector approach \cite{seither2011routing}. Its newer wireless version, \emph{batman-adv}, has gained traction and popularity and eventually made itself available in the Linux kernel.
 
 Route discovery is preemptively replaced with neighbour discovery, and each infrastructural node is instructed to calculate its potential best next-hop, significantly reducing the overhead of requiring each peer to be aware of the whole network topology. Its version V introduced a throughput metric to evaluate the links' quality and routing choices, replacing the version IV packet loss based metric, deemed unsuitable for larger network sizes \cite{seither2011routing}.
 
 \begin{figure} [ht]
   \begin{center}
-  \includegraphics[width=0.9\textwidth]{batman-adv-ogmv2}
+  \includegraphics[width=0.9\textwidth]{batman-adv-ogmv2.pdf}
   \caption{OriGinator Message version 2 (OGMv2) packet format \cite{cilfone2019wireless,open-mesh-ogmv2}. These messages are broadcasted with a collision avoidance delay mechanism defaulting to 1 second. The packets contain, among other fields, the originator's MAC address and throughput metric values, measured in units of 100 kbit/s.}
   \label{fig:batman-adv-ogmv2}
   \end{center}
@@ -36,6 +34,6 @@ Building on the previous, the B.A.T.M.A.N. routing protocol has been, through mu
 
 \subsubsection{OpenWRT, QEMU, and Raspberry Pis}
 
-The OpenWRT project \footnote{https://openwrt.org/} is a Linux distribution for embedded devices, which, in the context of this thesis, will serve as the host operating system for running the proof of concept solution. The project is based on the Linux kernel, encapsulating several of its libraries and packages, and is designed to be used on resource-constrained devices. OpenWRT features not only a writable root filesystem and automation build tools with integrated cross-compiler toolchain, but also a package management system that allows for the installation of additional software. The project also provides extensive configuration options for networking capabilities, which includes enabling mesh networking support through the B.A.T.M.A.N. routing protocol. 
+The OpenWRT project \footnote{\url{https://openwrt.org/}} is a Linux distribution for embedded devices, which, in the context of this thesis, will serve as the host operating system for running the proof of concept solution. The project is based on the Linux kernel, encapsulating several of its libraries and packages, and is designed to be used on resource-constrained devices. OpenWRT features not only a writable root filesystem and automation build tools with integrated cross-compiler toolchain, but also a package management system that allows for the installation of additional software. The project also provides extensive configuration options for networking capabilities, which includes enabling mesh networking support through the B.A.T.M.A.N. routing protocol. 
 
-To facilitate the development and testing of the proof of concept, the QEMU\footnote{https://www.qemu.org/} emulator will be used. QEMU is a generic and open-source machine virtualizer that, through its versatile set of features, allows for the full-system emulation of a wide range of hardware and software. The emulator will run the OpenWRT-generated images and spawn multiple virtual machines. These machines will simulate the various protocol participants by establishing, with the help of the network emulation tools, a fully connected mesh network. The intention is to ease and accelerate the development process by allowing for testing the proof of concept in a controlled environment, without the management, maintenance and deployment hustle of physical devices. Later, the solution will eventually be deployed on a set of Raspberry Pis\footnote{https://www.raspberrypi.org/}, the most widely used single-board computers for developing IoT solutions.
+To facilitate the development and testing of the proof of concept, the QEMU\footnote{\url{https://www.qemu.org/}} emulator will be used. QEMU is a generic and open-source machine virtualizer that, through its versatile set of features, allows for the full-system emulation of a wide range of hardware and software. The emulator will run the OpenWRT-generated images and spawn multiple virtual machines. These machines will simulate the various protocol participants by establishing, with the help of the network emulation tools, a fully connected mesh network. The intention is to ease and accelerate the development process by allowing for testing the proof of concept in a controlled environment, without the management, maintenance and deployment hustle of physical devices. Later, the solution will eventually be deployed on a set of Raspberry Pis\footnote{\url{https://www.raspberrypi.org/}}, the most widely used single-board computers for developing IoT solutions.
