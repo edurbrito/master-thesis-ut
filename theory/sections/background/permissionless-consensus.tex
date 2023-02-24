@@ -1,4 +1,4 @@
-The following section reuses work done in the Distributed Systems Seminar, during the fall semester of the 2022/2023 academic year. The original version of the seminar paper can be found in \cite{units-of-permissionless-consensus}.
+The following section and subsections reuse the work done in the Distributed Systems Seminar, during the fall semester of the 2022/2023 academic year. The original version of the seminar paper can be found in \cite{units-of-permissionless-consensus}.
 
 Long has been the time when consensus was still on the verge of being considered such a fundamental problem of distributed systems. Generally defined by Lamport, et al. \cite{pease1980reaching, lamport2019byzantine}, consensus means reaching an agreement between multiple parties in the potential presence of faulty individuals. As per multi-agent systems, interacting over computer networks, consensus is thought to be the result of a coordination effort, that eventually leads the parties to agree on some value at a given moment. However, the evolution of the consensus problem has been invariably limited by a set of strong assumptions. The well-known Byzantine-Fault-Tolerant multiparty consensus systems, that have been designed over the years, are usually meant to work only with a set of known participants, being them faulty or not \cite{castro1999practical}. 
 
@@ -14,15 +14,15 @@ Technically, permissionless environments allow for larger networks that depict l
 
 \begin{figure}[ht]
   \begin{center}
-  \includegraphics[width=0.9\textwidth]{building-blocks-consensus.png}
-  \caption{An illustration of the permissionless consensus building blocks - 
+  \includegraphics[width=0.9\textwidth]{building-blocks-consensus.pdf}
+  \caption{An illustration of the permissionless consensus building phases - 
   the block generation and proposal phases followed by the block validation, 
   along with frequent network topology changes and the consequent serialization of the information.}
   \label{fig:building-blocks-consensus}
   \end{center}
 \end{figure}
 
-Also described in \cite{survey-dist-consensus}, very concisely, the way to achieve an operating protocol, as seen in the mainstream Blockchain networks, is by first generating the agreeable value, in this particular case, a block and its proof, disseminating the information to the network, followed by the eventual validation and acceptance of the block by the rest of the nodes. This is the approximate moment when consensus is reached (See Fig. \ref{fig:building-blocks-consensus}). During the whole process, a fair and somewhat predictable incentive mechanism is also needed, that rewards participants for their honest effort in reaching consensus, and punishes the ones that are not behaving correctly. These incentives are of major importance in this very context of permissionless consensus and all these building blocks form the basis of the inner functioning of Bitcoin itself \cite{nakamoto2008bitcoin}, replicated with some variations in other permissionless networks \cite{buterin2014next}. The following is a short introduction to some relevant proof units that feature in the most popular Blockchain systems.
+Also described in \cite{survey-dist-consensus}, very concisely, the way to achieve an operating protocol, as seen in the mainstream Blockchain networks, is by first generating the agreeable value, in this particular case, a block and its proof, proposing and disseminating the information to the network, followed by the eventual validation and acceptance of the block by the majority of the nodes. This is the approximate moment of probabilistic finality, when consensus is ultimately reached (See Fig. \ref{fig:building-blocks-consensus}). During the whole process, a fair and somewhat predictable incentive mechanism is also needed, that rewards participants for their honest effort in reaching consensus, and punishes the ones that are not behaving correctly. These incentives are of major importance in this very context of permissionless consensus and all these building phases form the basis of the inner functioning of Bitcoin itself \cite{nakamoto2008bitcoin}, replicated with some variations in other networks \cite{buterin2014next, survey-dist-consensus}. The following is a short introduction to some relevant proof units that feature in the most popular Blockchain systems.
 
 \subsubsection{Proof-of-Work and Proof-of-Stake}
 
