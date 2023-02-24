@@ -3,5 +3,6 @@
     "cSpell.enableFiletypes": [
         "tex"
     ],
-    "ltex.language": "en-GB"
+    "ltex.language": "en-GB",
+    "ltex.enabled": ["latex", "markdown", "tex"],
 }
