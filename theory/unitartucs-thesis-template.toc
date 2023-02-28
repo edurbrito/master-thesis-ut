@@ -14,13 +14,13 @@
 \contentsline {subsection}{\numberline {2.2}Wireless Mesh Networks}{9}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}B.A.T.M.A.N. Routing Protocol}{11}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}OpenWRT, QEMU, and Raspberry Pis}{12}{subsubsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.3}Permissionless Consensus}{12}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.3}Permissionless Consensus}{13}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}Proof-of-X}{13}{subsubsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.2}Proof-of-Work and Proof-of-Stake}{15}{subsubsection.2.3.2}%
 \contentsline {section}{\numberline {3}Related Work}{17}{section.3}%
-\contentsline {section}{References}{20}{section*.22}%
-\contentsline {section}{Appendix}{21}{section*.23}%
-\contentsline {subsection}{I. Glossary}{21}{section*.24}%
+\contentsline {section}{References}{20}{section*.23}%
+\contentsline {section}{Appendix}{21}{section*.24}%
+\contentsline {subsection}{I. Glossary}{21}{section*.25}%
 \babel@toc {english}{}\relax 
-\contentsline {subsection}{II. Licence}{22}{section*.25}%
+\contentsline {subsection}{II. Licence}{22}{section*.26}%
 \babel@toc {english}{}\relax 
