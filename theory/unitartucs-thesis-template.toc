@@ -7,9 +7,9 @@
 \contentsline {section}{\numberline {2}Background}{7}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Proof-of-Location}{7}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Parties Involved}{8}{subsubsection.2.1.1}%
-\contentsline {paragraph}{Prover.}{8}{section*.15}%
-\contentsline {paragraph}{Witness.}{8}{section*.16}%
-\contentsline {paragraph}{Verifier.}{8}{section*.17}%
+\contentsline {paragraph}{Prover.}{8}{section*.14}%
+\contentsline {paragraph}{Witness.}{8}{section*.15}%
+\contentsline {paragraph}{Verifier.}{8}{section*.16}%
 \contentsline {subsubsection}{\numberline {2.1.2}Common Threat Models}{9}{subsubsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.2}Wireless Mesh Networks}{9}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}B.A.T.M.A.N. Routing Protocol}{11}{subsubsection.2.2.1}%
@@ -18,9 +18,9 @@
 \contentsline {subsubsection}{\numberline {2.3.1}Proof-of-X}{13}{subsubsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.2}Proof-of-Work and Proof-of-Stake}{15}{subsubsection.2.3.2}%
 \contentsline {section}{\numberline {3}Related Work}{17}{section.3}%
-\contentsline {section}{References}{20}{section*.23}%
-\contentsline {section}{Appendix}{21}{section*.24}%
-\contentsline {subsection}{I. Glossary}{21}{section*.25}%
+\contentsline {section}{References}{20}{section*.22}%
+\contentsline {section}{Appendix}{21}{section*.23}%
+\contentsline {subsection}{I. Glossary}{21}{section*.24}%
 \babel@toc {english}{}\relax 
-\contentsline {subsection}{II. Licence}{22}{section*.26}%
+\contentsline {subsection}{II. Licence}{22}{section*.25}%
 \babel@toc {english}{}\relax 
