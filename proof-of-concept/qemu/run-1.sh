@@ -7,11 +7,10 @@ if [ -z "${STY}" ]; then
     exit 1
 fi
 
-SHARED_PATH="$(pwd)/shared"
 NUM_SESSION=1
 
 ## OpenWrt in QEMU
-BASE_IMG=openwrt-x86-generic-generic-ext4-combined.img
+BASE_IMG=openwrt-x86-64-generic-ext4-combined.img
 BOOTARGS+=("-serial" "chardev:charconsole0")
 
 
@@ -34,7 +33,6 @@ screen qemu-system-x86_64 -enable-kvm -name "instance${NUM_SESSION}" \
     -drive file=root.cow$NUM_SESSION,if=none,id=drive0,cache=unsafe,discard=unmap \
     -nic tap,ifname=tap$NUM_SESSION,script=no,downscript=no,model=virtio,mac=02:ba:de:af:fe:"${twodigit_id}" \
     -nic user,model=virtio,mac=06:ba:de:af:fe:"${twodigit_id}" \
-    -virtfs local,path="${SHARED_PATH}",security_model=none,mount_tag=host \
     -gdb tcp:127.0.0.1:$((23000+$NUM_SESSION)) \
     -device virtio-rng \
     -device virtio-serial,id=virtio-serial \

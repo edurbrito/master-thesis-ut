@@ -2,7 +2,7 @@
 
 USER="$(whoami)"
 BRIDGE=br-qemu
-NUM_SESSIONS=3
+NUM_SESSIONS=4
 
 sudo ip link add "${BRIDGE}" type bridge
 for i in $(seq 1 "${NUM_SESSIONS}"); do

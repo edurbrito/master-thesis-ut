@@ -7,7 +7,7 @@ if [ -z "${STY}" ]; then
     exit 1
 fi
 
-NUM_SESSION=2
+NUM_SESSION=4
 
 ## OpenWrt in QEMU
 BASE_IMG=openwrt-x86-64-generic-ext4-combined.img
