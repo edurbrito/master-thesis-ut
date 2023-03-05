@@ -1,6 +1,7 @@
 # Ubuntu based OpenWrt build environment
 
 # build with:
+#
 # sudo docker build \
 # --build-arg OPENWRT_TARGET=x86-64.Linux-x86_64 \
 # --build-arg OPENWRT_TARGET_URL=https://downloads.openwrt.org/snapshots/targets/x86/64/openwrt-imagebuilder-x86-64.Linux-x86_64.tar.xz \
@@ -14,6 +15,7 @@
 # for x86_64: OPENWRT_TARGET=x86-64.Linux-x86_64 , OPENWRT_TARGET_URL=https://downloads.openwrt.org/snapshots/targets/x86/64/openwrt-imagebuilder-x86-64.Linux-x86_64.tar.xz , OPENWRT_PROFILE=generic
 
 # run with:
+#
 # sudo docker run --rm -v ./output:/tmp/output openwrt-builder
 
 # pull the latest ubuntu image
