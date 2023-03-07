@@ -18,9 +18,12 @@
 \contentsline {subsubsection}{\numberline {2.3.1}Proof-of-X}{13}{subsubsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.2}Proof-of-Work and Proof-of-Stake}{15}{subsubsection.2.3.2}%
 \contentsline {section}{\numberline {3}Related Work}{17}{section.3}%
-\contentsline {section}{References}{21}{section*.22}%
-\contentsline {section}{Appendix}{22}{section*.23}%
-\contentsline {subsection}{I. Glossary}{22}{section*.24}%
+\contentsline {subsection}{\numberline {3.1}Trusted and Centralized Architectures}{17}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Progressively Distributed and Decentralized Protocols}{18}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Fully Trustless Environments}{19}{subsection.3.3}%
+\contentsline {section}{References}{22}{section*.22}%
+\contentsline {section}{Appendix}{23}{section*.23}%
+\contentsline {subsection}{I. Glossary}{23}{section*.24}%
 \babel@toc {english}{}\relax 
-\contentsline {subsection}{II. Licence}{23}{section*.25}%
+\contentsline {subsection}{II. Licence}{24}{section*.25}%
 \babel@toc {english}{}\relax 
