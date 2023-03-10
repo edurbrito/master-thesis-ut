@@ -21,7 +21,6 @@
 \contentsline {subsection}{\numberline {3.1}Trusted and Centralized Architectures}{17}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Progressively Distributed and Decentralized Protocols}{18}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Fully Trustless Environments}{19}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Alternative Strategies}{21}{subsection.3.4}%
 \contentsline {section}{References}{25}{section*.22}%
 \contentsline {section}{Appendix}{26}{section*.23}%
 \contentsline {subsection}{I. Glossary}{26}{section*.24}%
