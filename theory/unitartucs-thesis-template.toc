@@ -10,20 +10,26 @@
 \contentsline {paragraph}{Prover.}{8}{section*.14}%
 \contentsline {paragraph}{Witness.}{8}{section*.15}%
 \contentsline {paragraph}{Verifier.}{8}{section*.16}%
-\contentsline {subsubsection}{\numberline {2.1.2}Common Threat Models}{9}{subsubsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.2}Wireless Mesh Networks}{9}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}B.A.T.M.A.N. Routing Protocol}{11}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}OpenWRT, QEMU, and Raspberry Pis}{12}{subsubsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.3}Permissionless Consensus}{13}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Proof-of-X}{13}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Proof-of-Work and Proof-of-Stake}{15}{subsubsection.2.3.2}%
-\contentsline {section}{\numberline {3}Related Work}{17}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Trusted and Centralized Architectures}{17}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Progressively Distributed and Decentralized Protocols}{18}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Fully Trustless Environments}{19}{subsection.3.3}%
-\contentsline {section}{References}{25}{section*.22}%
-\contentsline {section}{Appendix}{26}{section*.23}%
-\contentsline {subsection}{I. Glossary}{26}{section*.24}%
+\contentsline {paragraph}{Definition 1 (Proof-of-Location{}).}{9}{section*.18}%
+\contentsline {paragraph}{Definition 2 (Completeness).}{9}{section*.19}%
+\contentsline {paragraph}{Definition 3 (Spatio-temporal Soundness).}{9}{section*.20}%
+\contentsline {paragraph}{Definition 4 (Non-transferability).}{10}{section*.21}%
+\contentsline {paragraph}{Definition 5 (Correctness).}{10}{section*.22}%
+\contentsline {subsubsection}{\numberline {2.1.2}Common Threat Models}{10}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Application Scenarios}{10}{subsubsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.2}Wireless Mesh Networks}{11}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}B.A.T.M.A.N. Routing Protocol}{13}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}OpenWRT, QEMU, and Raspberry Pis}{14}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Permissionless Consensus}{14}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Proof-of-X}{15}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Proof-of-Work and Proof-of-Stake}{17}{subsubsection.2.3.2}%
+\contentsline {section}{\numberline {3}Related Work}{19}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Trusted and Centralized Architectures}{19}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Progressively Distributed and Decentralized Protocols}{21}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Fully Trustless Environments}{22}{subsection.3.3}%
+\contentsline {section}{References}{28}{section*.30}%
+\contentsline {section}{Appendix}{29}{section*.31}%
+\contentsline {subsection}{I. Glossary}{29}{section*.32}%
 \babel@toc {english}{}\relax 
-\contentsline {subsection}{II. Licence}{27}{section*.25}%
+\contentsline {subsection}{II. Licence}{30}{section*.33}%
 \babel@toc {english}{}\relax 
