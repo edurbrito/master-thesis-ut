@@ -24,6 +24,8 @@ Concisely and in concrete terms, these location-proof arrangements expect the ex
     \end{center}
 \end{figure}
 
+\TODO{Add arrows legend to the figure: short-range and synchronously, asynchronous communitcation, etc...}
+
 Inspired by \cite{nasrulin2018robust, dupin2018location}, we now introduce a substantially formal but general definition of the \pol{} problem, along with some of its desirable properties:
 
 \paragraph{Definition 1 (\pol{}).} A \pol{} is a verifiable digital certificate that attests the presence of a prover $\sigma$ at location $l$ and time $t$.
@@ -45,6 +47,7 @@ Like with any technology that involves the collection and processing of sensitiv
 Some common scenarios that may affect the security of \pol{} systems are, for instance, malicious provers that may attempt to forge location claims, or witnesses that may attempt to collude with other entities to falsify the information. Adversary efforts may also be observed in the form of baleful provers, or witnesses, that may try to respectively impersonate other peers. Sybil attacks are too on the horizon of possible threats, often employed to disrupt the operation of the system by flooding it with fake participants \cite{nasrulin2018robust}. Other works have also considered semi-honest adversaries that, despite following the protocol rules, may try to learn additional information from the messages exchanged \cite{dupin2018location}. These and other attack vectors are further dissected in Chapter~\ref{sec:related-work}, with reference to the multiple solutions that attempt at being shielded from these malicious scenarios.
 
 \subsubsection{Application Scenarios}
+\label{sec:background-proof-of-location-application-scenarios}
 
 The concept of verifiable and digital \pol{} has an inevitably wide range of applications, as deconstructed by Sariou and Alec, in \cite{saroiu2009enabling}. For instance, in customer reward systems, \pol{} can be used to provide incentives to customers who visit physical stores. Retailers can create loyalty programs that offer rewards to customers who visit their stores and verify their physical presence. The rewards can be tailored to individual customer preferences, based on their location data, and can encourage customer retention. In location-authenticated business review systems, \pol{} can be used to verify the authenticity of customer reviews. By requiring customers to verify their physical presence at the business location, businesses can prevent fake reviews and ensure that only genuine customer feedback is posted. In location-restricted web content delivery, \pol{} can be used to limit access to online content based on the user's physical location. For example, a video streaming service may use verifiable \pol{} to prevent users from accessing content outside legally allowed regions or countries. In voter's physical presence verification, a \pol{} protocol can be set to prevent voter fraud in multiple levels, by verifying that voters are physically present at the polling stations. This technology may consequently increase the integrity of the physical voting process and ensure that only eligible voters are allowed to vote. Additional application scenarios can be derived from the above, while many others are yet to be discovered.
 
