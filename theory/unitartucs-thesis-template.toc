@@ -10,11 +10,11 @@
 \contentsline {paragraph}{Prover.}{8}{section*.14}%
 \contentsline {paragraph}{Witness.}{8}{section*.15}%
 \contentsline {paragraph}{Verifier.}{8}{section*.16}%
-\contentsline {paragraph}{Definition 1 (Proof-of-Location{}).}{9}{section*.19}%
-\contentsline {paragraph}{Definition 2 (Completeness).}{9}{section*.20}%
-\contentsline {paragraph}{Definition 3 (Spatio-temporal Soundness).}{9}{section*.21}%
-\contentsline {paragraph}{Definition 4 (Non-transferability).}{10}{section*.22}%
-\contentsline {paragraph}{Definition 5 (Correctness).}{10}{section*.23}%
+\contentsline {paragraph}{Definition 1 (Proof-of-Location{}).}{9}{section*.18}%
+\contentsline {paragraph}{Definition 2 (Completeness).}{9}{section*.19}%
+\contentsline {paragraph}{Definition 3 (Spatio-temporal Soundness).}{9}{section*.20}%
+\contentsline {paragraph}{Definition 4 (Non-transferability).}{10}{section*.21}%
+\contentsline {paragraph}{Definition 5 (Correctness).}{10}{section*.22}%
 \contentsline {subsubsection}{\numberline {2.1.2}Common Threat Models}{10}{subsubsection.2.1.2}%
 \contentsline {subsubsection}{\numberline {2.1.3}Application Scenarios}{10}{subsubsection.2.1.3}%
 \contentsline {subsection}{\numberline {2.2}Wireless Mesh Networks}{11}{subsection.2.2}%
@@ -25,11 +25,11 @@
 \contentsline {subsubsection}{\numberline {2.3.2}Proof-of-Work and Proof-of-Stake}{17}{subsubsection.2.3.2}%
 \contentsline {section}{\numberline {3}Related Work}{19}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Trusted and Centralized Architectures}{19}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Progressively Distributed and Decentralized Protocols}{21}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Fully Trustless Environments}{22}{subsection.3.3}%
-\contentsline {section}{References}{28}{section*.31}%
-\contentsline {section}{Appendix}{29}{section*.32}%
-\contentsline {subsection}{I. Glossary}{29}{section*.33}%
+\contentsline {subsection}{\numberline {3.2}Progressively Distributed and Decentralized Protocols}{20}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Fully Trustless Environments}{21}{subsection.3.3}%
+\contentsline {section}{References}{28}{section*.28}%
+\contentsline {section}{Appendix}{29}{section*.29}%
+\contentsline {subsection}{I. Glossary}{29}{section*.30}%
 \babel@toc {english}{}\relax 
-\contentsline {subsection}{II. Licence}{30}{section*.34}%
+\contentsline {subsection}{II. Licence}{30}{section*.31}%
 \babel@toc {english}{}\relax 
