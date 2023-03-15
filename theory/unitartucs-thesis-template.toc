@@ -25,11 +25,11 @@
 \contentsline {subsubsection}{\numberline {2.3.2}Proof-of-Work and Proof-of-Stake}{17}{subsubsection.2.3.2}%
 \contentsline {section}{\numberline {3}Related Work}{19}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Trusted and Centralized Architectures}{19}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Progressively Distributed and Decentralized Protocols}{20}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Fully Trustless Environments}{21}{subsection.3.3}%
-\contentsline {section}{References}{28}{section*.28}%
-\contentsline {section}{Appendix}{29}{section*.29}%
-\contentsline {subsection}{I. Glossary}{29}{section*.30}%
+\contentsline {subsection}{\numberline {3.2}Progressively Distributed and Decentralized Protocols}{21}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Fully Trustless Environments}{23}{subsection.3.3}%
+\contentsline {section}{References}{29}{section*.30}%
+\contentsline {section}{Appendix}{30}{section*.31}%
+\contentsline {subsection}{I. Glossary}{30}{section*.32}%
 \babel@toc {english}{}\relax 
-\contentsline {subsection}{II. Licence}{30}{section*.31}%
+\contentsline {subsection}{II. Licence}{31}{section*.33}%
 \babel@toc {english}{}\relax 
