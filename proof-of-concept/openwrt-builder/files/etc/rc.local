@@ -22,6 +22,11 @@ ip addr flush dev bat0
 LAST_DIGIT=$(ip addr show eth0 | awk '/ether/ {gsub(":","",$2); print substr($2,length($2),1)}')
 ip addr add 192.168.0.$LAST_DIGIT/24 dev bat0
 
+# geth setup
+
+chmod +x /etc/geth.sh
+/etc/geth.sh
+
 ## Raspberry Pi config
 #
 # uci set wireless.@wifi-device[0].disabled="0"

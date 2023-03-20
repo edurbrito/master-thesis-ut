@@ -15,7 +15,7 @@ fi
 NUM_SESSION=$1
 
 ## OpenWrt in QEMU
-BASE_IMG=openwrt-x86-64-generic-ext4-combined.img
+BASE_IMG=openwrt-22.03.3-x86-64-generic-ext4-combined.img
 BOOTARGS+=("-serial" "chardev:charconsole0")
 
 
@@ -31,7 +31,7 @@ twodigit_id="$(echo $NUM_SESSION|awk '{ printf "%02X", $1 }')"
 qemu-img create -b "${BASE_IMG}" -f qcow2 root.cow$NUM_SESSION -F raw
 screen qemu-system-x86_64 -enable-kvm -name "instance${NUM_SESSION}" \
     -display none -no-user-config -nodefaults \
-    -m 512M,maxmem=2G,slots=2 -device virtio-balloon \
+    -m 1G,maxmem=2G,slots=2 -device virtio-balloon \
     -cpu host -smp 2 -machine q35,accel=kvm,usb=off,dump-guest-core=off \
     -device virtio-scsi-pci \
     -device scsi-hd,drive=drive0 \

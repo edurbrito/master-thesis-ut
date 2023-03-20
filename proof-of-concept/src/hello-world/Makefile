@@ -34,7 +34,7 @@ endef
 
 # Package build instructions; invoke the target-specific compiler to first compile the source file, and then to link the file into the final executable
 define Build/Compile
-		env GOOS=linux GOARCH=386 go build $(PKG_BUILD_DIR)/hello-world.go
+		env GOOS=linux GOARCH=amd64 go build $(PKG_BUILD_DIR)/hello-world.go
 endef
 
 # Package install instructions; create a directory inside the package to hold our executable, and then copy the executable we built previously into the folder
