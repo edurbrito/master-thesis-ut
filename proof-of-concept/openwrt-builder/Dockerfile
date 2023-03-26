@@ -74,7 +74,7 @@ ARG OPENWRT_PROFILE
 # build the image
 RUN cd /tmp/openwrt/openwrt-imagebuilder-${OPENWRT_TARGET} && \
     make info && \
-    make image PROFILE=${OPENWRT_PROFILE} PACKAGES="kmod-fs-ext4 kmod-batman-adv e2fsprogs batctl-full wpad-openssl geth -wpad-basic -wpad-basic-wolfssl -wpad-basic-mbedtls" FILES="/tmp/files" && \ 
+    make image PROFILE=${OPENWRT_PROFILE} PACKAGES="kmod-fs-ext4 kmod-batman-adv e2fsprogs batctl-full wpad-openssl geth curl -wpad-basic -wpad-basic-wolfssl -wpad-basic-mbedtls" FILES="/tmp/files" && \ 
     mkdir /tmp/output
 
 # create an env variable for persistence

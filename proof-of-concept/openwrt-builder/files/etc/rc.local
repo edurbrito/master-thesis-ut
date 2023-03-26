@@ -19,7 +19,22 @@ batctl meshif bat0 hop_penalty 255
 
 ip addr flush dev eth0
 ip addr flush dev bat0
-LAST_DIGIT=$(ip addr show eth0 | awk '/ether/ {gsub(":","",$2); print substr($2,length($2),1)}')
+
+mac_address=$(ip addr show eth0 | awk '/ether/ {gsub(":","",$2); print $2}')
+last_two_hex_pairs="${mac_address: -4}"
+last_hex_pair="${last_two_hex_pairs: -2}"
+second_last_hex_pair="${last_two_hex_pairs:0:2}"
+
+LAST_DIGIT=0
+
+if [[ "$second_last_hex_pair" == "01" ]]; then
+    LAST_DIGIT=$(printf "%d" "0x$last_hex_pair")
+elif [[ "$second_last_hex_pair" == "02" ]]; then
+    LAST_DIGIT=$((100 + $(printf "%d" "0x$last_hex_pair")))
+else
+    echo "Error: invalid value of second_last_hex_pair"
+fi
+
 ip addr add 192.168.0.$LAST_DIGIT/24 dev bat0
 
 # geth setup

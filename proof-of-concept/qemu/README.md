@@ -2,16 +2,6 @@
 
 This directory contains the scripts for setting up a QEMU emulation environment for OpenWRT and BATMAN. The setup is based on the [OpenWRT QEMU Emulation Environment](https://www.open-mesh.org/doc/devtools/Emulation_Environment.html). 
 
-## Setup
-
-To setup the QEMU emulation environment, run the following command:
-
-```bash
-$ ./virtual-network.sh
-```
-
-This script will create a virtual network, as a bridge `br-qemu`, with 4 tap devices, that can communicate with each other.
-
 ## Running the instances
 
 To run the VM instances, first copy the `openwrt-x86-64-generic-ext4-combined-efi.img` image to this directory. You may need to first extract the image from the `openwrt-x86-64-generic-ext4-combined-efi.img.gz` file.
@@ -20,7 +10,133 @@ Then, in separate terminals, run the following commands for each instance:
 
 ```bash
 $ screen
-$ ./run.sh <instance_number>
+$ ./run.sh <instance_type> <instance_number>
 ```
 
-The instance number should be between 1 and 4. The script will create, for each instance, a (copy on write) snapshot of the base image. Then, it will start the instance, and connect it to the virtual network, using the tap device corresponding to the instance number. BATMAN is also started on the instance. 
+The instance type should be either `witness` or `prover`. The instance number should be a positive integer. The script will create, for each instance, a (copy on write) snapshot of the base image. Then, it will start the instance, and connect it to a virtual network, using the tap device corresponding to the instance type and number. BATMAN is also started on the instance. 
+
+## Starting the witness Ethereum blockchain
+
+To start the Ethereum blockchain for the witnesses, do the following:
+
+```bash
+# getting the witness addresses
+# run on each witness instance
+$ ls -1t /root/.ethereum/keystore/UTC--* | head -1 | awk -F"--" '{print $3}'
+# remember all the witness addresses
+
+# initialize the genesis block
+# on each witness instance 
+# and with the other witness addresses as arguments 
+# run the following command
+# Note: 
+#   * for witness 1, the other witness addresses are witness 2 and witness 3
+#   * for witness 2, the other witness addresses are witness 1 and witness 3
+#   * for witness 3, the other witness addresses are witness 1 and witness 2
+$ geth-init -signers <witness_address_a>,<witness_address_b>
+
+# start the blockchain
+# on each witness instance run the following command
+# NB:   
+#   * the first witness instance does not need bootnodes
+#   * the other witness instances need only the enode of the first witness instance
+#   * after running `geth-run` on the first witness instance, its enode can be obtained by running the following command
+#     $ geth attach
+#     > admin.nodeInfo.enode
+$ geth-run -bootnodes <witness_enode_1>
+
+# attach to the blockchain
+# on each witness instance run the following command
+$ geth attach
+
+# check peers
+> admin.peers
+
+# check current block number
+> eth.blockNumber
+```
+
+Example run:
+
+```bash
+# on witness 1
+$ ls -1t /root/.ethereum/keystore/UTC--* | head -1 | awk -F"--" '{print $3}'
+f0988f23802b795c8d77cd51d769614faa41cc66
+
+# on witness 2
+$ ls -1t /root/.ethereum/keystore/UTC--* | head -1 | awk -F"--" '{print $3}'
+2b6a91f8c65d2d39fed38f85d374aac747510b57
+
+# on witness 3
+$ ls -1t /root/.ethereum/keystore/UTC--* | head -1 | awk -F"--" '{print $3}'
+0843a0019582837274c4c20b760bb336d9ae19ec
+
+# on witness 1
+$ geth-init -signers 2b6a91f8c65d2d39fed38f85d374aac747510b57,0843a0019582837274c4c20b760bb336d9ae19ec
+
+# on witness 2
+$ geth-init -signers f0988f23802b795c8d77cd51d769614faa41cc66,0843a0019582837274c4c20b760bb336d9ae19ec
+
+# on witness 3
+$ geth-init -signers f0988f23802b795c8d77cd51d769614faa41cc66,2b6a91f8c65d2d39fed38f85d374aac747510b57
+
+# on witness 1
+$ geth-run
+$ geth attach
+> admin.nodeInfo.enode
+enode://44643c74c538d7dd3d28f46bb33ff29ba20e1722199779e6f1fb5cc35ad4d33fa9f9e2747bd2caa22d1a66c734368a67365b4e3ff8015cc851b545d394dc43de@192.168.0.1:30301
+
+# on witness 2
+$ geth-run -bootnodes enode://44643c74c538d7dd3d28f46bb33ff29ba20e1722199779e6f1fb5cc35ad4d33fa9f9e2747bd2caa22d1a66c734368a67365b4e3ff8015cc851b545d394dc43de@192.168.0.1:30301
+
+# on witness 3
+$ geth-run -bootnodes enode://44643c74c538d7dd3d28f46bb33ff29ba20e1722199779e6f1fb5cc35ad4d33fa9f9e2747bd2caa22d1a66c734368a67365b4e3ff8015cc851b545d394dc43de@192.168.0.1:30301
+```
+
+## Connect the prover to the witness blockchain
+
+To connect the prover to the witness blockchain, do the following:
+
+```bash
+# on the prover instance, get the latest block number
+$ curl -s -X POST -H "Content-Type: application/json" \
+      --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["latest",true],"id":1}' \
+      http://192.168.0.1:8545 \
+    | sed -n 's/.*"number":"0x\([0-9a-f]*\)".*/0x\1/p' \
+    | xargs printf "%d\n"
+836
+
+
+# on the prover instance, get the latest block hash
+$ curl -s -X POST -H "Content-Type: application/json" \
+      --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["latest",true],"id":1}' \
+      http://192.168.0.1:8545 \
+    | sed -n 's/.*"hash":"0x\([0-9a-f]*\)".*/0x\1/p'
+0x690ea1859dbe729c83d51c086aafeb0a489549a9b1ace96e928dfccc4bff58ee
+
+# on the prover instance, get the signature of the latest block hash by the witness 1
+$ curl -X POST -H "Content-Type: application/json" \
+      --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0xf0988f23802b795c8d77cd51d769614faa41cc66", "0x690ea1859dbe729c83d51c086aafeb0a489549a9b1ace96e928dfccc4bff58ee"],"id":1}' \
+        http://192.168.0.1:8545
+{"jsonrpc":"2.0","id":1,"result":"0xe825164f31bf1d993d020203e83be5590f53c7bcff5007be76cbe612ebb69bdb148ea9d1607ef4423fca71656f27fd08b597378ff05d9707e7c957595b5c4bd81b"}
+
+# on the prover instance, get the signature of the latest block hash by the witness 2
+$ curl -X POST -H "Content-Type: application/json" \
+      --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x2b6a91f8c65d2d39fed38f85d374aac747510b57", "0x690ea1859dbe729c83d51c086aafeb0a489549a9b1ace96e928dfccc4bff58ee"],"id":1}' \
+        http://192.168.0.2:8545
+{"jsonrpc":"2.0","id":1,"result":"0xdc793792b89dbf01b127a07d04a78e658a0a56ac0626e86c0ffdbd36575dd2e16145acc92e6a19d0d911d2b7e49bc777ee5a47b2bc174f0e074f1c6c44a288391c"}
+
+# on the prover instance, get the signature of the latest block hash by the witness 3
+$ curl -X POST -H "Content-Type: application/json" \
+      --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x0843a0019582837274c4c20b760bb336d9ae19ec", "0x690ea1859dbe729c83d51c086aafeb0a489549a9b1ace96e928dfccc4bff58ee"],"id":1}' \
+        http://192.168.0.3:8545
+{"jsonrpc":"2.0","id":1,"result":"0x0d65ede8956794216d7fa243c3c6fcfd70c1f65a763cf4ce67f2eb96acad21f20b807b6b51a2b559e1049b5db6d4bad0c9dd15fa273fa46f882a9d063b14e4be1b"}
+
+```
+
+
+Next steps:
+
+* deploy smart contracts to the witness blockchain in the genesis block
+* call the smart contracts from the prover instance to prove that he is synced with the witness blockchain, by providing the latest block hash to the smart contract
+* gather the signatures of the latest block hash from the witnesses

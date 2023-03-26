@@ -145,7 +145,7 @@ func main() {
 		"--http --http.addr " + addr + " --http.port 8545 " +
 		"--http.api \"eth,net,web3,personal,clique\" " +
 		"--allow-insecure-unlock --netrestrict 192.168.0.0/24 --nat \"extip:" + addr + "\" " +
-		"--port 30301 --maxpeers 50 " +
+		"--port 30301 --maxpeers 50 --miner.gasprice 0" +
 		"--unlock 0x" + accountAddress + " --password /root/.password --mine " +
 		bootnodesString + "--cache=1024 --snapshot=0"
 
