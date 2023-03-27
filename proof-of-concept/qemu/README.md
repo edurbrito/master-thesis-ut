@@ -132,11 +132,46 @@ $ curl -X POST -H "Content-Type: application/json" \
         http://192.168.0.3:8545
 {"jsonrpc":"2.0","id":1,"result":"0x0d65ede8956794216d7fa243c3c6fcfd70c1f65a763cf4ce67f2eb96acad21f20b807b6b51a2b559e1049b5db6d4bad0c9dd15fa273fa46f882a9d063b14e4be1b"}
 
-```
 
+# get the prover account address
+$ ls -1t /root/.ethereum/keystore/UTC--* | head -1 | awk -F"--" '{print $3}'
+b49469cdc56be5150efe6b9fd2a0cb38a517b4d0
+
+# attach the prover instance to the witness blockchain
+$ geth attach http://192.168.0.1:8545
+
+# unlock the prover account
+> personal.unlockAccount("0x88a4e7013328e3c70a6226dfffb9e8b1bf9f0764","")
+
+# load the smart contract ABI
+> var abi = JSON.parse('[{"inputs":[{"internalType":"bytes32","name":"hashToCheck","type":"bytes32"}],"name":"verifyLastBlockHash","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"}]');
+
+# load the smart contract address
+> var address = "0x0000000000000000000000000000000000000011";
+
+# load the smart contract
+> var contract = web3.eth.contract(abi).at(address);
+
+# call the smart contract
+> contract.verifyLastBlockHash.call("0x690ea1859dbe729c83d51c086aafeb0a489549a9b1ace96e928dfccc4bff58ee")
+false
+
+> contract.verifyLastBlockHash.sendTransaction("0x690ea1859dbe729c83d51c086aafeb0a489549a9b1ace96e928dfccc4bff58ee", {from: eth.coinbase, gas: 100000})
+0xcef5556bf06d49c12c4fd2684e68d142791b4b127f18e4d576c09c4ea60071c5
+
+# get the transaction receipt
+> eth.getTransactionReceipt("0xcef5556bf06d49c12c4fd2684e68d142791b4b127f18e4d576c09c4ea60071c5")
+
+# get the transaction result
+> eth.getTransactionReceipt("0xcef5556bf06d49c12c4fd2684e68d142791b4b127f18e4d576c09c4ea60071c5").logs[0].data
+
+```
 
 Next steps:
 
-* deploy smart contracts to the witness blockchain in the genesis block
+* add state changing functions to the smart contract
 * call the smart contracts from the prover instance to prove that he is synced with the witness blockchain, by providing the latest block hash to the smart contract
-* gather the signatures of the latest block hash from the witnesses
+* get the transaction receipt from the witnesses
+
+* get the block data from the witnesses
+* get from the witnesses the signatures of the block hash that includes the transaction

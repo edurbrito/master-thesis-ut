@@ -123,7 +123,7 @@ func main() {
 	// --http --http.addr 192.168.0.1 --http.port 8545 \
 	// --http.api "eth,net,web3,personal,clique" \
 	// --allow-insecure-unlock --netrestrict 192.168.0.0/24 --nat "extip:192.168.0.1" \
-	// --port 30301 --maxpeers 50 \
+	// --port 30301 --maxpeers 50 --miner.gasprice 0 \
 	// --unlock 0xA052112667220935273f2A8220DB5D597CaF13bC --password /root/.password --mine \
 	// --bootnodes "enode://2b044e3696c9767eae04a74a9cddaf3dd8028413fc0a8fd903cb6d308af8927f38cca6abc50502ad849689c3ae5adaf63002a829ac62791d5328c6663a69546a@192.168.0.2:30301" \
 	// --cache=1024 --snapshot=0 console
@@ -145,7 +145,7 @@ func main() {
 		"--http --http.addr " + addr + " --http.port 8545 " +
 		"--http.api \"eth,net,web3,personal,clique\" " +
 		"--allow-insecure-unlock --netrestrict 192.168.0.0/24 --nat \"extip:" + addr + "\" " +
-		"--port 30301 --maxpeers 50 --miner.gasprice 0" +
+		"--port 30301 --maxpeers 50 --miner.gasprice 0 " +
 		"--unlock 0x" + accountAddress + " --password /root/.password --mine " +
 		bootnodesString + "--cache=1024 --snapshot=0"
 

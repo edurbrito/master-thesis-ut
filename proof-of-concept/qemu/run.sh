@@ -38,11 +38,6 @@ echo "Instance number: $INSTANCE_NUMBER"
 BASE_IMG=openwrt-22.03.3-x86-64-generic-ext4-combined.img
 BOOTARGS+=("-serial" "chardev:charconsole0")
 
-if [ ! -e "/sys/class/net/tap${INSTANCE_NUMBER}" ]; then
-    echo "hub script must be started first to create tap-$INSTANCE_TYPE-$INSTANCE_NUMBER interface" >&2
-    exit 1
-fi
-
 instance_type_id=""
 instance_number_id="$(echo "$INSTANCE_NUMBER" | awk '{ printf "%02X",$1 }')"
 gdb_port=0
