@@ -3,8 +3,12 @@
 pragma solidity >=0.8.2 <0.9.0;
 
 contract BlockHashVerifier {
-    function verifyLastBlockHash(bytes32 hashToCheck) public view returns(bool) {
+
+    int public counter = 0;
+    
+    function verifyLastBlockHash(bytes32 hashToCheck) public returns(bool) {
         bytes32 lastBlockHash = blockhash(block.number - 1);
+        counter++;
         return lastBlockHash == hashToCheck;
     }
 }

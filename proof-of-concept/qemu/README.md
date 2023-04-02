@@ -72,13 +72,13 @@ $ ls -1t /root/.ethereum/keystore/UTC--* | head -1 | awk -F"--" '{print $3}'
 0843a0019582837274c4c20b760bb336d9ae19ec
 
 # on witness 1
-$ geth-init -signers 2b6a91f8c65d2d39fed38f85d374aac747510b57,0843a0019582837274c4c20b760bb336d9ae19ec
+$ geth-init -signers 0x2b6a91f8c65d2d39fed38f85d374aac747510b57,0x0843a0019582837274c4c20b760bb336d9ae19ec
 
 # on witness 2
-$ geth-init -signers f0988f23802b795c8d77cd51d769614faa41cc66,0843a0019582837274c4c20b760bb336d9ae19ec
+$ geth-init -signers 0xf0988f23802b795c8d77cd51d769614faa41cc66,0x0843a0019582837274c4c20b760bb336d9ae19ec
 
 # on witness 3
-$ geth-init -signers f0988f23802b795c8d77cd51d769614faa41cc66,2b6a91f8c65d2d39fed38f85d374aac747510b57
+$ geth-init -signers 0xf0988f23802b795c8d77cd51d769614faa41cc66,0x2b6a91f8c65d2d39fed38f85d374aac747510b57
 
 # on witness 1
 $ geth-run
@@ -132,19 +132,14 @@ $ curl -X POST -H "Content-Type: application/json" \
         http://192.168.0.3:8545
 {"jsonrpc":"2.0","id":1,"result":"0x0d65ede8956794216d7fa243c3c6fcfd70c1f65a763cf4ce67f2eb96acad21f20b807b6b51a2b559e1049b5db6d4bad0c9dd15fa273fa46f882a9d063b14e4be1b"}
 
-
-# get the prover account address
-$ ls -1t /root/.ethereum/keystore/UTC--* | head -1 | awk -F"--" '{print $3}'
-b49469cdc56be5150efe6b9fd2a0cb38a517b4d0
-
 # attach the prover instance to the witness blockchain
 $ geth attach http://192.168.0.1:8545
 
 # unlock the prover account
-> personal.unlockAccount("0x88a4e7013328e3c70a6226dfffb9e8b1bf9f0764","")
+> personal.unlockAccount(eth.coinbase,"")
 
 # load the smart contract ABI
-> var abi = JSON.parse('[{"inputs":[{"internalType":"bytes32","name":"hashToCheck","type":"bytes32"}],"name":"verifyLastBlockHash","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"}]');
+> var abi = JSON.parse('[{"inputs": [],"name": "greet","outputs": [{"internalType": "int256","name": "","type": "int256"}], "stateMutability":"view","type": "function"}]');
 
 # load the smart contract address
 > var address = "0x0000000000000000000000000000000000000011";
@@ -153,18 +148,22 @@ $ geth attach http://192.168.0.1:8545
 > var contract = web3.eth.contract(abi).at(address);
 
 # call the smart contract
-> contract.verifyLastBlockHash.call("0x690ea1859dbe729c83d51c086aafeb0a489549a9b1ace96e928dfccc4bff58ee")
+> contract.verifyLastBlockHashPure.call(eth.getBlockByNumber("latest").hash)
 false
 
-> contract.verifyLastBlockHash.sendTransaction("0x690ea1859dbe729c83d51c086aafeb0a489549a9b1ace96e928dfccc4bff58ee", {from: eth.coinbase, gas: 100000})
+> contract.verifyLastBlockHash.sendTransaction(eth.getBlockByNumber("latest").hash, {from: eth.coinbase, gas: 22627})
 0xcef5556bf06d49c12c4fd2684e68d142791b4b127f18e4d576c09c4ea60071c5
 
 # get the transaction receipt
-> eth.getTransactionReceipt("0xcef5556bf06d49c12c4fd2684e68d142791b4b127f18e4d576c09c4ea60071c5")
+> eth.getTransactionReceipt("0x188b9008bf6f777ac2bc9b1008b2358ae1f53305ce1608123460a439c4fa9044")
 
 # get the transaction result
-> eth.getTransactionReceipt("0xcef5556bf06d49c12c4fd2684e68d142791b4b127f18e4d576c09c4ea60071c5").logs[0].data
+> eth.getTransactionReceipt("0x15889a242c830ad91f606c9026e0d68a3c6f3d5bbcd9628903de69f655f643bc").logs[0].data
 
+# get transaction
+> eth.getTransaction("0x188b9008bf6f777ac2bc9b1008b2358ae1f53305ce1608123460a439c4fa9044")
+
+> eth.sendTransaction({from:eth.coinbase, to: eth.coinbase, value: 0, data: eth.getBlockByNumber("latest").hash})
 ```
 
 Next steps:
@@ -175,3 +174,11 @@ Next steps:
 
 * get the block data from the witnesses
 * get from the witnesses the signatures of the block hash that includes the transaction
+
+
+------
+
+# chapter requirements with long term goals with specific scenario
+# chronological order of implementation with success and failure
+# measurements chapter & future work considerations
+# conclusion chapter
