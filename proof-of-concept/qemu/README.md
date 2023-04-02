@@ -166,6 +166,17 @@ false
 > eth.sendTransaction({from:eth.coinbase, to: eth.coinbase, value: 0, data: eth.getBlockByNumber("latest").hash})
 ```
 
+## Simulate the proof-of-location generation
+
+To simulate the proof-of-location generation, we will use the `geth-prover` tool.
+It will create, sign and send a synchronous transaction to the blockchain and will wait for the transaction to be mined.
+It will then gather the signatures of the witnesses.
+
+```bash
+# on the prover instance
+$ geth-prover -signers 0x2b6a91f8c65d2d39fed38f85d374aac747510b57,0x0843a0019582837274c4c20b760bb336d9ae19ec,0xf0988f23802b795c8d77cd51d769614faa41cc66 -ips http://192.168.0.1:8545,http://192.168.0.2:8545,http://192.168.0.3:8545
+```
+
 Next steps:
 
 * add state changing functions to the smart contract

@@ -18,6 +18,11 @@ $ docker build \
 
 The `OPENWRT_TARGET` and `OPENWRT_TARGET_URL` arguments are used to specify the target and URL for the OpenWRT image builder. The `CACHEBUST` argument is used to bust the Docker cache when the image builder is updated. The `OPENWRT_PROFILE` argument is used to specify the OpenWRT profile to build. The `ADDITIONAL_FILES` argument is used to specify the directory containing additional [`files`](./files/) to copy into the image. The `--build-arg`  arguments are mandatory.
 
+### The `files` Directory
+
+The [`files`](./files/) directory contains the additional files that will be copied into the image. 
+This directory should be structured as the root directory of the OpenWRT image, for the files intended to be copied into the image.
+
 ### OpenWRT Targets
 
 The following table lists the available OpenWRT targets and their URLs:
