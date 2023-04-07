@@ -60,7 +60,7 @@ func main() {
 	// 0311885597e5eaa5e9b06e70a4e50e663c3d8396
 	accountAddress := strings.Split(fileName, "--")[2]
 
-	signers := []string{accountAddress}
+	signers := []string{"0x" + accountAddress}
 
 	if *signersFlag != "" {
 		signers = append(signers, strings.Split(*signersFlag, ",")...)
@@ -122,6 +122,11 @@ func main() {
 		"extradata": "0x0000000000000000000000000000000000000000000000000000000000000000%s0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
 		"alloc": {}
 	}`
+
+	// remove 0x from signers
+	for i, signer := range signers {
+		signers[i] = signer[2:]
+	}
 
 	// concatenate all signers into one string
 	signersString := strings.Join(signers, "")

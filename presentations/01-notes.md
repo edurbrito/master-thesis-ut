@@ -18,7 +18,7 @@ decentralized and trustless solutions.
 But first, I shall introduce you again to the concept
 of a (digital) Proof-of-Location.
 Which is nothing more profound than
-an electronic certificate that assuredly attests 
+an electronic certificate that attests 
 one’s relative position in both space and time.
 
 The general idea is that this location proof
@@ -26,7 +26,8 @@ evokes an act of witnessing and mixes
 multiple types of interactions between entities
 with different dynamic properties.
 Usually, we expect the existence of a prover 
-that engages in any communication protocol with nearby participants,
+that engages in any short ranged communication protocol 
+with nearby participants,
 the witnesses, with the goal of gathering 
 a verifiable Proof-of-Location claim, to be later
 presented to a verifier, therefore convincing it 
@@ -46,6 +47,9 @@ proof-of-location purpose. They represent all the
 location-based access control systems
 liablity claims
 location assertions
+review systems
+physical stores
+event registrations
 etc...
 
 --------------------------------------------------------------------
@@ -98,12 +102,12 @@ Finally, there is work, more product oriented, that tries to do
 a bit of all this and actually ship this into the wild.
 FOAM is a a decentralized Proof of Location protocol that
 mixes a lot of these concepts to create a fully trustless service.
-It unfortunatelly uses LoRa as the communication tech, but
+It uses LoRa as the communication tech, but
 it nicely explores all these ideas (picture).
 
 As a footnote, all these solutions are usually expected
 to formally be secure if generally
-complete, spatio-temporally sound, non-transferable, and tamper-evident.
+complete, spatio-temporally sound, and non-transferable.
 
 --------------------------------------------------------------------
 

@@ -27,9 +27,15 @@
 \contentsline {subsection}{\numberline {3.1}Trusted and Centralized Architectures}{19}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Progressively Distributed and Decentralized Protocols}{21}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Fully Trustless Environments}{23}{subsection.3.3}%
-\contentsline {section}{References}{29}{section*.30}%
-\contentsline {section}{Appendix}{30}{section*.31}%
-\contentsline {subsection}{I. Glossary}{30}{section*.32}%
+\contentsline {section}{\numberline {4}Protocol Fundamentals}{26}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Overview}{26}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Dynamic and Non-Hierarchic Mesh Networks}{27}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Turing-Complete Clock Synchronization}{28}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Relative Proof-of-Location{}}{28}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Absolute Proof-of-Location{}}{28}{subsection.4.5}%
+\contentsline {section}{References}{32}{section*.31}%
+\contentsline {section}{Appendix}{33}{section*.32}%
+\contentsline {subsection}{I. Glossary}{33}{section*.33}%
 \babel@toc {english}{}\relax 
-\contentsline {subsection}{II. Licence}{31}{section*.33}%
+\contentsline {subsection}{II. Licence}{34}{section*.34}%
 \babel@toc {english}{}\relax 
