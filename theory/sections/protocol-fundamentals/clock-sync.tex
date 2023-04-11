@@ -27,10 +27,9 @@ The Turing Completeness property of the consensus system fundamentally allows fo
 \begin{figure}[ht]
     \begin{center}
     \includegraphics[width=0.9\textwidth]{overview-pol-turing.pdf}
-    \caption{Some more sophisticated use cases of a Turing Complete \pol{} protocol, where the execution of zone-relative smart contracts is enabled. On the left, a multi-prover configuration, where the witnesses are required to attest to the simultaneous existence of a group of provers, and on the right, the case where a verifier enforces the attestation of the prover's location at a specific time.}
+    \caption{Some more sophisticated use cases of a Turing Complete \pol{} protocol, where the execution of zone-relative smart contracts is enabled. On the left, a multi-prover configuration, where the witnesses are required to attest to the simultaneous existence of a group of provers, and on the right, the case where a verifier enforces the attestation of the prover's location at a specific block, or time.}
     \label{fig:proof-of-location-overview-turing}
     \end{center}
 \end{figure}
 
-\newpage
 With all the above considerations in mind, this thesis is set to demonstrate the simplest case of the application of a consensus mechanism to achieve time synchronization. The goal is to experimentally prove that the block interval of a consensus mechanism can be used to synchronize  the clocks of a network of nodes, and thus achieve zone-relative time consciousness. All the other considerations, like the extensibility of the proposed approach, the possibility of achieving a more accurate location attestation, or making use of the Turing Completeness of the system for more complex logic, are left for future work. The next section will cover the proof generation process to finally produce a \pol{} claim.
