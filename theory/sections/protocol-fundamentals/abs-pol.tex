@@ -1,0 +1,11 @@
+Having established a means for Relative \pol{}, the next step would be to extend the protocol to finally achieve Absolute \pol{}. A possible path consists in combining the Relative \pol{} protocol with a Global Time Synchronization Protocol and a Global Positioning System, as illustrated in Figure~\ref{fig:proof-of-location-overview-absolute-pol}.
+
+\begin{figure}[h!]
+    \begin{center}
+    \includegraphics[width=0.55\textwidth]{overview-pol-abs-pol.pdf}
+    \caption{Achieving Absolute \pol{} by combining Relative \pol{} with a Global Time Synchronization Protocol and a Global Positioning System.}
+    \label{fig:proof-of-location-overview-absolute-pol}
+    \end{center}
+\end{figure}
+
+The goal is to produce a \pol{} certificate that is spatio-temporally sound, relative to the zone, but which can as well be spatially and temporally acknowledged by any other node outside the zone. This effort may require, for instance, a global timestamping server, or protocol that can assert a certain level of globally secure timestamp accuracy in a tamper-proof manner. In a decentralized fashion, one example of such a system is a public Blockchain network, such as Bitcoin \cite{nakamoto2008bitcoin}, or Ethereum \cite{buterin2014next}. The same applies to the Global Positioning System (GPS). A standard system of geographic coordinates could be validated and embedded into the \pol{} certificate, to globally assert the location of the whole zone. It is worth noting that the Relative \pol{} protocol is flexible enough to accommodate any kind of higher level protocol, including more complex certificate formats and composite information to be signed. This and further extensions are left for future work.

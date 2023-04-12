@@ -31,11 +31,11 @@
 \contentsline {subsection}{\numberline {4.1}Overview}{26}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Dynamic and Non-Hierarchic Mesh Networks}{27}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Turing-Complete Clock Synchronization}{31}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Relative Proof-of-Location{}}{35}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Absolute Proof-of-Location{}}{37}{subsection.4.5}%
-\contentsline {section}{References}{41}{section*.39}%
-\contentsline {section}{Appendix}{42}{section*.40}%
-\contentsline {subsection}{I. Glossary}{42}{section*.41}%
+\contentsline {subsection}{\numberline {4.4}Relative Proof-of-Location{}}{36}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Absolute Proof-of-Location{}}{38}{subsection.4.5}%
+\contentsline {section}{References}{43}{section*.40}%
+\contentsline {section}{Appendix}{44}{section*.41}%
+\contentsline {subsection}{I. Glossary}{44}{section*.42}%
 \babel@toc {english}{}\relax 
-\contentsline {subsection}{II. Licence}{43}{section*.42}%
+\contentsline {subsection}{II. Licence}{45}{section*.43}%
 \babel@toc {english}{}\relax 
