@@ -11,14 +11,27 @@ The prerequisites for the establishment of an ad hoc Ethereum network expect fir
 \begin{figure}[h!]
     \begin{center}
     \includegraphics[width=0.75\textwidth]{proof-of-concept-blockchain.pdf}
-    \caption{The Blockchain network setup.}
+    \caption{The Ethereum Blockchain network setup, featuring a Proof-of-Authority consensus protocol with a block time of 10 seconds.}
     \label{fig:pol-implementation:blockchain-network}
     \end{center}
 \end{figure}
 
-\subsubsection{Proof Generation} \label{sec:pol-implementation:proof-generation}
+\subsubsection{Proof Generation and Verification} \label{sec:pol-implementation:proof-generation-verification}
 
-\subsubsection{Proof Verification} \label{sec:pol-implementation:proof-verification}
+Guaranteed the establishment of permissionless consensus, the witnesses are set to pace the network events at the same rate, acting as a decentralized and replicated state machine. The prover can now take advantage of this synchrony to request the generation of a \pol{} certificate. To accomplish such task, the prover instance, which is also part of the mesh network communication channel and has been assigned an IP address in the same subnet, needs to interact with the running Blockchain and follow the protocol specified in Section~\ref{sec:protocol-fundamentals-rel-pol}. The automation of this process was also achieved with the help of a utility program written in Golang. A random witness is first chosen and inquired about the most recent block. After that, a transaction is assembled, signed, and submitted. All the requests are accomplished via the JSON-RPC API exposed by the \emph{geth} client running in the witnesses' machines. The transaction is then broadcasted to the network and the prover waits for it to be included in a block. Once the transaction is confirmed, the prover can verify its validity. If valid, it can finally request the block signatures from the witnesses. The transaction validation process may be automated via the deployment of a smart contract in the network, decentralizing and automating the procedure. An example of a smart contract was also developed and successfully deployed. The contract was written in Solidity\footnote{\url{https://docs.soliditylang.org/en/v0.8.19/}}, compiled to the Ethereum Virtual Machine (EVM) bytecode, and included in the Genesis file. It compares the input hash submitted by the prover with the hash of the last block in the network. The contract is invoked by the prover, via a Blockchain transaction, and returns a boolean value, indicating whether the transaction is valid or not, automating the validation process that would otherwise be performed manually by either the prover or the verifier. This approach serves as demonstration of the feasibility of the deployment of smart contracts in the zone. More sophisticated contracts can be developed and deployed according to application needs, expanding the possibilities of the protocol and its use cases for providing decentralized and zone-relative location services. As a note, the success of the proof generation process is dependent on the adjustment of the block time, which is a parameter that can be configured in the chosen PoA protocol. The block time is set to 10 seconds in the current implementation. Similar to the time-limited approach presented by Nosouhi et al. \cite{nosouhi2020blockchain}, the block time interval serves the purpose of preventing proxy attacks, shortening the chances for an adversary that is synchronized with the witnesses to interact with a remote prover and still be able to generate a spatio-temporally sound \pol{} certificate. This time interval should be planned and adjusted according to the application needs and the desired levels of security.
+
+% The pseudocode of such a contract is presented in Procedure~\ref{proc:block-hash-verifier}.
+
+% \begin{procedure} [!h]
+% 	\caption{BlockHashVerifier()} \label{proc:block-hash-verifier}
+% 	\KwIn{Block Hash To Check $hashToCheck$}
+% 	\KwResult{Transaction is Valid.}
+% 	\BlankLine
+%     $LastBlockHash \gets CurrentBlock.Hash$;
+%     \BlankLine
+%     \Return $hashToCheck == LastBlockHash$;
+% 	%\eIf{error messages were found}{\Return \False\;}{\Return \True\;}
+% \end{procedure}
 
 
 % Geth choice for the Ethereum client
