@@ -9,7 +9,6 @@ To run the VM instances, first copy the `openwrt-x86-64-generic-ext4-combined-ef
 Then, in separate terminals, run the following commands for each instance:
 
 ```bash
-$ screen
 $ ./run.sh <instance_type> <instance_number>
 ```
 

@@ -2,10 +2,10 @@
 
 BOOTARGS=()
 
-if [ -z "${STY}" ]; then
-    echo "must be started inside a screen session" >&2
-    exit 1
-fi
+# if [ -z "${STY}" ]; then
+#     echo "must be started inside a screen session" >&2
+#     exit 1
+# fi
 
 if [[ $# -ne 2 ]]; then
     echo "Usage: $0 <instance-type> <instance-number>"
