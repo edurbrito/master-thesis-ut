@@ -163,6 +163,9 @@
   morekeywords={*,game, fun}       % if you want to add more keywords to the set
 }
 
+\usepackage{pgfplots}
+\usepackage{subcaption}
+
 
 % Obscure packages to write logic formulae and program semantics
 % Unless you do a thesis on program semantics or static code analysis you do not need that
@@ -441,7 +444,9 @@ the paper is significantly enhanced by their inclusion.}
 
 \input{sections/proof-of-concept/pol-implementation.tex}
 
-\subsection{Results} \label{sec:proof-of-concept-results}
+\subsection{Measurements} \label{sec:proof-of-concept-results}
+
+\input{sections/proof-of-concept/results.tex}
 
 % Measurements of the latency, throughput, etc. of the batman network
 % Measurements of the latency, throughput, etc. of the Ethereum network
