@@ -3,49 +3,47 @@
 \babel@toc {english}{}\relax 
 \babel@toc {estonian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {1}Introduction}{6}{section.1}%
-\contentsline {section}{\numberline {2}Background}{8}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Proof-of-Location}{8}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Parties Involved}{9}{subsubsection.2.1.1}%
-\contentsline {paragraph}{Prover.}{9}{section*.14}%
-\contentsline {paragraph}{Witness.}{9}{section*.15}%
-\contentsline {paragraph}{Verifier.}{9}{section*.16}%
-\contentsline {paragraph}{Definition 1 (Proof-of-Location{}).}{10}{section*.18}%
-\contentsline {paragraph}{Definition 2 (Completeness).}{10}{section*.19}%
-\contentsline {paragraph}{Definition 3 (Spatio-temporal Soundness).}{10}{section*.20}%
-\contentsline {paragraph}{Definition 4 (Non-transferability).}{10}{section*.21}%
-\contentsline {paragraph}{Definition 5 (Correctness).}{11}{section*.22}%
-\contentsline {subsubsection}{\numberline {2.1.2}Common Threat Models}{11}{subsubsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.3}Application Scenarios}{11}{subsubsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.2}Wireless Mesh Networks}{13}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}B.A.T.M.A.N. Routing Protocol}{14}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}OpenWrt, QEMU, and Raspberry Pis}{16}{subsubsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.3}Permissionless Consensus}{16}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Proof-of-X}{17}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Proof-of-Work and Proof-of-Stake}{19}{subsubsection.2.3.2}%
-\contentsline {section}{\numberline {3}Related Work}{21}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Trusted and Centralized Architectures}{21}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Progressively Distributed and Decentralized Protocols}{23}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Fully Trustless Environments}{25}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Protocol Fundamentals}{28}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Overview}{28}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Dynamic and Non-Hierarchic Mesh Networks}{29}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Turing-Complete Clock Synchronization}{33}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Relative Proof-of-Location{}}{38}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Absolute Proof-of-Location{}}{41}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Proof-of-Concept}{42}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Infrastructure}{42}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}System Design}{42}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}Testbed Setup}{43}{subsubsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.3}Network Architecture}{44}{subsubsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.2}Protocol Implementation}{45}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Practical Permissionless Consensus}{46}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Proof Generation and Verification}{47}{subsubsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.3}Measurements}{49}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Conclusion}{54}{section.6}%
-\contentsline {section}{References}{58}{section*.48}%
-\contentsline {section}{Appendix}{59}{section*.49}%
-\contentsline {subsection}{I. Glossary}{59}{section*.50}%
-\babel@toc {english}{}\relax 
-\contentsline {subsection}{II. Licence}{60}{section*.51}%
-\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{5}{section.1}%
+\contentsline {section}{\numberline {2}Background}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Proof-of-Location}{7}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Parties Involved}{8}{subsubsection.2.1.1}%
+\contentsline {paragraph}{Prover.}{8}{section*.7}%
+\contentsline {paragraph}{Witness.}{8}{section*.8}%
+\contentsline {paragraph}{Verifier.}{8}{section*.9}%
+\contentsline {paragraph}{Definition 1 (Proof-of-Location{}).}{9}{section*.11}%
+\contentsline {paragraph}{Definition 2 (Completeness).}{9}{section*.12}%
+\contentsline {paragraph}{Definition 3 (Spatio-temporal Soundness).}{9}{section*.13}%
+\contentsline {paragraph}{Definition 4 (Non-transferability).}{9}{section*.14}%
+\contentsline {paragraph}{Definition 5 (Correctness).}{10}{section*.15}%
+\contentsline {subsubsection}{\numberline {2.1.2}Common Threat Models}{10}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Application Scenarios}{10}{subsubsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.2}Wireless Mesh Networks}{12}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}B.A.T.M.A.N. Routing Protocol}{13}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}OpenWrt, QEMU, and Raspberry Pis}{15}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Permissionless Consensus}{15}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Proof-of-X}{16}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Proof-of-Work and Proof-of-Stake}{17}{subsubsection.2.3.2}%
+\contentsline {section}{\numberline {3}Related Work}{20}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Trusted and Centralized Architectures}{20}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Progressively Distributed and Decentralized Protocols}{22}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Fully Trustless Environments}{24}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Protocol Fundamentals}{27}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Overview}{27}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Dynamic and Non-Hierarchic Mesh Networks}{28}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Turing-Complete Clock Synchronization}{32}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Relative Proof-of-Location{}}{37}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Absolute Proof-of-Location{}}{40}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Proof-of-Concept}{41}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Infrastructure}{41}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}System Design}{41}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Testbed Setup}{42}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Network Architecture}{43}{subsubsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.2}Protocol Implementation}{44}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Practical Permissionless Consensus}{45}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Proof Generation and Verification}{46}{subsubsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.3}Measurements}{48}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Conclusion}{53}{section.6}%
+\contentsline {section}{References}{58}{section*.40}%
+\contentsline {section}{Appendix}{59}{section*.41}%
+\contentsline {subsection}{I. Repository}{59}{section*.42}%
+\contentsline {subsection}{II. Licence}{59}{section*.43}%

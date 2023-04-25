@@ -1,0 +1,91 @@
+
+% If the thesis is printed on both sides of the page then 
+% the second page must be must be empty. Comment this out
+% if you print only to one side of the page comment this out
+%\newpage
+%\thispagestyle{empty}    
+%\phantom{Text to fill the page}
+% END OF EXTRA PAGE WITHOUT NUMBER
+
+
+%===COMPULSORY INFO PAGE
+\newpage
+
+%=== Info in English
+\newcommand\EngInfo{{%
+\selectlanguage{english}
+\noindent\textbf{\large \thesistitle{}}
+
+\vspace*{1ex}
+
+\noindent\textbf{Abstract:}
+
+\noindent
+
+Location-based services have become ubiquitous in today's world, and their integration with a wide range of applications and technologies has shaped humankind's interaction with the physical reality. However, the current state of these systems is very far from ensuring integrity of the location data, especially in trustless environments with no individual honesty guarantees. A paradigm shift is needed, in order to provide security against geo-tampering or location spoofing. To address such requirements, digital and verifiable \pol{} systems may help on conceptualizing the idea of location-based authentication or authorization, in adversarial environments. Envisioned is a vast range applications, in the fields of smart cities, augmented democracy, digital integrity, liability, and internet transparency. This thesis presents a novel approach to the problem, charting the \pol{} systems' paradigm and building upon existing work, to further uncover the path towards fully trustless and decentralized \pol{} protocols. Making use of mesh network technologies and permissionless consensus mechanisms, a \poc{} is implemented and evaluated, showcasing the generation of correct and spatio-temporally sound location proofs.
+
+\vspace*{1ex}
+
+\noindent\textbf{Keywords:} location-based services, proof-of-location, mesh networks, permissionless consensus, blockchain, smart contracts
+
+\vspace*{1ex}
+
+\noindent\textbf{CERCS:} P170 Computer science, systems, control
+
+\TODO{NOT WORKING: CERCS code and name:~\url{https://www.etis.ee/Portal/Classifiers/Details/d3717f7b-bec8-4cd9-8ea4-c89cd56ca46e}}
+
+\vspace*{1ex}
+}}%\newcommand\EngInfo
+
+
+%=== Info in Estonian
+\newcommand\EstInfo{{%
+\selectlanguage{estonian}
+\noindent\textbf{\large Tüübituletus neljandat järku loogikavalemitele}
+\vspace*{1ex}
+
+\noindent\textbf{Lühikokkuvõte:} 
+
+\TODO{MISSING TRANSLATION}
+
+%\noindent ...
+
+% \TODO{One or two sentences providing a basic introduction to the field, comprehensible to a scientist in
+% any discipline.}
+% \TODO{Two to three sentences of
+% more detailed background, comprehensible to scientists in related disciplines.}
+% \TODO{One sentence clearly stating the general problem being addressed by this particular
+% study.}
+% \TODO{One sentence summarising the main result (with the words ``here we show´´ or their equivalent).}
+% \TODO{Two or three sentences explaining what
+% the main result reveals in direct
+% comparison to what was thought to be the case previously, or how the main result adds to previous knowledge.}
+% \TODO{One or two sentences to put the results into a more general context.}
+% \TODO{Two or three sentences to provide a
+% broader perspective, readily
+% comprehensible to a scientist in any
+% discipline, may be included in the first paragraph
+% if the editor considers that the accessibility of
+% the paper is significantly enhanced by their inclusion.}
+
+\vspace*{1ex}
+
+\noindent\textbf{Võtmesõnad:} \TODO{List of keywords}
+%Layout, formatting, template
+
+\vspace*{1ex}
+
+\noindent\textbf{CERCS:}\TODO{NOT WORKING: CERCS kood ja nimetus:~\url{https://www.etis.ee/Portal/Classifiers/Details/d3717f7b-bec8-4cd9-8ea4-c89cd56ca46e}}
+
+\vspace*{1ex}
+}}%\newcommand\EstInfo
+
+
+%=== Determine the order of languages on Info page
+\iflanguage{english}{\EngInfo}{\EstInfo}
+\iflanguage{estonian}{\EngInfo}{\EstInfo}
+
+\TODO{Fix hiphenization}
+
+\newpage
+\tableofcontents

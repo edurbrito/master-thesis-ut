@@ -3,6 +3,8 @@
 % \listoftodos[Unsolved issues]
 % END OF TODO PAGE 
 
+\input{sections/abstract.tex}
+
 \newpage
 \section{Introduction} \label{sec:introduction}
 
@@ -96,7 +98,13 @@
 
 \input{sections/conclusion.tex}
 
-% Measurements of the latency, throughput, etc. of the batman network
-% Measurements of the latency, throughput, etc. of the Ethereum network
-% Measurement of CPU usage, memory usage, etc. of the witness nodes
-% Measurement of CPU usage, memory usage, etc. of the prover proof generation process
+\newpage
+
+% BibTeX bibliography
+\bibliographystyle{ieeetr} %plain=[1], alpha=[BGZ09]
+\bibliography{unitartucs-thesis}
+\addcontentsline{toc}{section}{\refname}
+
+\newpage
+
+\input{sections/appendix.tex}
