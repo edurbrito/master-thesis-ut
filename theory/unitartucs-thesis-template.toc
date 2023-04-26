@@ -7,14 +7,14 @@
 \contentsline {section}{\numberline {2}Background}{7}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Proof-of-Location}{7}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Parties Involved}{8}{subsubsection.2.1.1}%
-\contentsline {paragraph}{Prover.}{8}{section*.7}%
-\contentsline {paragraph}{Witness.}{8}{section*.8}%
-\contentsline {paragraph}{Verifier.}{8}{section*.9}%
-\contentsline {paragraph}{Definition 1 (Proof-of-Location{}).}{9}{section*.11}%
-\contentsline {paragraph}{Definition 2 (Completeness).}{9}{section*.12}%
-\contentsline {paragraph}{Definition 3 (Spatio-temporal Soundness).}{9}{section*.13}%
-\contentsline {paragraph}{Definition 4 (Non-transferability).}{9}{section*.14}%
-\contentsline {paragraph}{Definition 5 (Correctness).}{10}{section*.15}%
+\contentsline {paragraph}{Prover.}{8}{section*.5}%
+\contentsline {paragraph}{Witness.}{8}{section*.6}%
+\contentsline {paragraph}{Verifier.}{8}{section*.7}%
+\contentsline {paragraph}{Definition 1 (Proof-of-Location{}).}{9}{section*.9}%
+\contentsline {paragraph}{Definition 2 (Completeness).}{9}{section*.10}%
+\contentsline {paragraph}{Definition 3 (Spatio-temporal Soundness).}{9}{section*.11}%
+\contentsline {paragraph}{Definition 4 (Non-transferability).}{9}{section*.12}%
+\contentsline {paragraph}{Definition 5 (Correctness).}{10}{section*.13}%
 \contentsline {subsubsection}{\numberline {2.1.2}Common Threat Models}{10}{subsubsection.2.1.2}%
 \contentsline {subsubsection}{\numberline {2.1.3}Application Scenarios}{10}{subsubsection.2.1.3}%
 \contentsline {subsection}{\numberline {2.2}Wireless Mesh Networks}{12}{subsection.2.2}%
@@ -43,7 +43,7 @@
 \contentsline {subsubsection}{\numberline {5.2.2}Proof Generation and Verification}{46}{subsubsection.5.2.2}%
 \contentsline {subsection}{\numberline {5.3}Measurements}{48}{subsection.5.3}%
 \contentsline {section}{\numberline {6}Conclusion}{53}{section.6}%
-\contentsline {section}{References}{58}{section*.40}%
-\contentsline {section}{Appendix}{59}{section*.41}%
-\contentsline {subsection}{I. Repository}{59}{section*.42}%
-\contentsline {subsection}{II. Licence}{59}{section*.43}%
+\contentsline {section}{References}{58}{section*.38}%
+\contentsline {section}{Appendix}{59}{section*.39}%
+\contentsline {subsection}{I. Repository}{59}{section*.40}%
+\contentsline {subsection}{II. Licence}{59}{section*.41}%
