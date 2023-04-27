@@ -18,7 +18,7 @@ This thesis will explore the concept of WMNs and their potential for serving as 
 
 The Better Approach To Mobile Ad-hoc Networks (B.A.T.M.A.N.)\footnote{\url{http://www.open-mesh.org/}} is a proactive routing protocol for WMNs that operates not at the network layer but at the data link layer, asserting the reliability of radio links using routing metrics and a distance-vector approach \cite{seither2011routing}. Its newer wireless version, \emph{batman-adv}, has gained traction and popularity and eventually made itself available in the Linux kernel.
 
-Route discovery is preemptively replaced with neighbour discovery, and each infrastructural node is instructed to calculate its potential best next-hop, significantly reducing the overhead of requiring each peer to be aware of the whole network topology. Its version V introduced a throughput metric to evaluate the links' quality and routing choices, replacing the version IV packet loss based metric, deemed unsuitable for larger network sizes \cite{seither2011routing}.
+Route discovery is preemptively replaced with neighbour discovery, and each infrastructural node is instructed to calculate its potential best next-hop, significantly reducing the overhead of requiring each peer to be aware of the whole network topology. Its version V introduced a throughput metric to evaluate the links' quality and routing choices, replacing version IV packet-loss metric, deemed unsuitable for larger network sizes \cite{seither2011routing}.
 
 \begin{figure} [ht]
   \begin{center}
