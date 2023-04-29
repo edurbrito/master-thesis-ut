@@ -7,14 +7,14 @@
 \contentsline {section}{\numberline {2}Background}{8}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Proof-of-Location}{8}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Parties Involved}{9}{subsubsection.2.1.1}%
-\contentsline {paragraph}{Prover.}{9}{section*.5}%
-\contentsline {paragraph}{Witness.}{9}{section*.6}%
-\contentsline {paragraph}{Verifier.}{9}{section*.7}%
-\contentsline {paragraph}{Definition 1 (Proof-of-Location{}).}{10}{section*.9}%
-\contentsline {paragraph}{Definition 2 (Completeness).}{10}{section*.10}%
-\contentsline {paragraph}{Definition 3 (Spatio-temporal Soundness).}{10}{section*.11}%
-\contentsline {paragraph}{Definition 4 (Non-transferability).}{10}{section*.12}%
-\contentsline {paragraph}{Definition 5 (Correctness).}{11}{section*.13}%
+\contentsline {paragraph}{Prover.}{9}{section*.3}%
+\contentsline {paragraph}{Witness.}{9}{section*.4}%
+\contentsline {paragraph}{Verifier.}{9}{section*.5}%
+\contentsline {paragraph}{Definition 1 (Proof-of-Location{}).}{10}{section*.7}%
+\contentsline {paragraph}{Definition 2 (Completeness).}{10}{section*.8}%
+\contentsline {paragraph}{Definition 3 (Spatio-temporal Soundness).}{10}{section*.9}%
+\contentsline {paragraph}{Definition 4 (Non-transferability).}{10}{section*.10}%
+\contentsline {paragraph}{Definition 5 (Correctness).}{11}{section*.11}%
 \contentsline {subsubsection}{\numberline {2.1.2}Common Threat Models}{11}{subsubsection.2.1.2}%
 \contentsline {subsubsection}{\numberline {2.1.3}Application Scenarios}{11}{subsubsection.2.1.3}%
 \contentsline {subsection}{\numberline {2.2}Wireless Mesh Networks}{13}{subsection.2.2}%
@@ -30,7 +30,7 @@
 \contentsline {section}{\numberline {4}Protocol Fundamentals}{28}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Overview}{28}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Dynamic and Non-Hierarchic Mesh Networks}{29}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Turing-Complete Clock Synchronization}{33}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.3}Turing-Complete Clock Synchronization}{34}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Relative Proof-of-Location{}}{38}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Absolute Proof-of-Location{}}{41}{subsection.4.5}%
 \contentsline {section}{\numberline {5}Proof-of-Concept}{42}{section.5}%
@@ -43,8 +43,8 @@
 \contentsline {subsubsection}{\numberline {5.2.2}Proof Generation and Verification}{48}{subsubsection.5.2.2}%
 \contentsline {subsection}{\numberline {5.3}Measurements}{49}{subsection.5.3}%
 \contentsline {section}{\numberline {6}Conclusion}{54}{section.6}%
-\contentsline {section}{References}{59}{section*.38}%
-\contentsline {section}{Appendix}{60}{section*.39}%
-\contentsline {subsection}{I. Repository}{60}{section*.40}%
-\contentsline {subsection}{II. Licence}{60}{section*.41}%
-\contentsline {subsection}{III. Writing Workflow}{60}{section*.43}%
+\contentsline {section}{References}{59}{section*.36}%
+\contentsline {section}{Appendix}{60}{section*.37}%
+\contentsline {subsection}{I. Repository}{60}{section*.38}%
+\contentsline {subsection}{II. Licence}{60}{section*.39}%
+\contentsline {subsection}{III. Writing Workflow}{60}{section*.41}%
