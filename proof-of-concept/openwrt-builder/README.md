@@ -1,6 +1,6 @@
-# OpenWRT Builder Docker Image
+# OpenWrt Builder Docker Image
 
-This directory contains the Dockerfile and supporting files for building the OpenWRT Builder Docker image. The image is based on the official Ubuntu image and contains all the necessary steps and tools to build OpenWRT.
+This directory contains the Dockerfile and supporting files for building the OpenWrt Builder Docker image. The image is based on the official Ubuntu image and contains all the necessary steps and tools to build OpenWrt.
 
 ## Building the Image
 
@@ -16,16 +16,16 @@ $ docker build \
     -t openwrt-builder .
 ```
 
-The `OPENWRT_TARGET` and `OPENWRT_TARGET_URL` arguments are used to specify the target and URL for the OpenWRT image builder. The `CACHEBUST` argument is used to bust the Docker cache when the image builder is updated. The `OPENWRT_PROFILE` argument is used to specify the OpenWRT profile to build. The `ADDITIONAL_FILES` argument is used to specify the directory containing additional [`files`](./files/) to copy into the image. The `--build-arg`  arguments are mandatory.
+The `OPENWRT_TARGET` and `OPENWRT_TARGET_URL` arguments are used to specify the target and URL for the OpenWrt image builder. The `CACHEBUST` argument is used to bust the Docker cache when the image builder is updated. The `OPENWRT_PROFILE` argument is used to specify the OpenWrt profile to build. The `ADDITIONAL_FILES` argument is used to specify the directory containing additional [`files`](./files/) to copy into the image. The `--build-arg`  arguments are mandatory.
 
 ### The `files` Directory
 
 The [`files`](./files/) directory contains the additional files that will be copied into the image. 
-This directory should be structured as the root directory of the OpenWRT image, for the files intended to be copied into the image.
+This directory should be structured as the root directory of the OpenWrt image, for the files intended to be copied into the image.
 
-### OpenWRT Targets
+### OpenWrt Targets
 
-The following table lists the available OpenWRT targets and their URLs:
+The following table lists the available OpenWrt targets and their URLs:
 
 | Target | URL | Profile | Comment |
 |--------|-----|---------|---------|
@@ -43,4 +43,4 @@ $ docker run --rm -v ./output:/tmp/output openwrt-builder
 
 The `-v ./output:/tmp/output` argument is used to mount the [`output`](./output/) directory in the host to the `/tmp/output` directory in the container.
 
-The container will copy the newly built OpenWRT image to the [`output`](./output/) directory.
+The container will copy the newly built OpenWrt image to the [`output`](./output/) directory.

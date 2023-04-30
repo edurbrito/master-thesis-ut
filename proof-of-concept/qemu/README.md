@@ -1,6 +1,6 @@
 # QEMU Emulation Environment
 
-This directory contains the scripts for setting up a QEMU emulation environment for OpenWRT and BATMAN. The setup is based on the [OpenWRT QEMU Emulation Environment](https://www.open-mesh.org/doc/devtools/Emulation_Environment.html). 
+This directory contains the scripts for setting up a QEMU emulation environment for OpenWrt and BATMAN. The setup is based on the [OpenWrt QEMU Emulation Environment](https://www.open-mesh.org/doc/devtools/Emulation_Environment.html). 
 
 ## Running the instances
 
