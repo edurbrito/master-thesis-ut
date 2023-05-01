@@ -65,10 +65,11 @@ The bridge interface, pooling all the mesh traffic exchanged between the tap int
 
 The Blockchain activity was also monitored, in order to observe the protocol behaviour, regarding the block generation and proposal phases. Figure~\ref{fig:blockchain-blocks-generation} captures the number of messages exchanged between the instances, during a time frame of typical protocol activity. The interval time between blocks, set to 10 seconds, corresponds to the higher peaks of TCP traffic, while the UDP traffic is more evenly distributed. This behaviour gets more pronounced as the number of instances increases. 
 
-\begin{figure} [h!]
+\begin{figure} [b!]
     \centering
     \begin{subfigure}[b]{\textwidth}
         \centering
+        \vspace{-0.5cm}
         \pgfplotstableread[col sep=comma]{data/blockchain-blocks-generation-4-instances.csv}\datatable
         
         \begin{tikzpicture}
@@ -83,7 +84,7 @@ The Blockchain activity was also monitored, in order to observe the protocol beh
                 grid=major,
                 grid style={dashed},
                 width=\textwidth,
-                height=0.5\textwidth,
+                height=0.48\textwidth,
                 legend pos=north west
             ]
         
@@ -115,7 +116,7 @@ The Blockchain activity was also monitored, in order to observe the protocol beh
                 grid=major,
                 grid style={dashed},
                 width=\textwidth,
-                height=0.5\textwidth,
+                height=0.48\textwidth,
                 legend pos=north west
             ]
         
@@ -131,6 +132,7 @@ The Blockchain activity was also monitored, in order to observe the protocol beh
         \label{fig:blockchain-blocks-generation-8-instances}
     \end{subfigure}
     \caption{The network activity, with a block time of 10 seconds.}
+    \vspace{-0.5cm}
     \label{fig:blockchain-blocks-generation}
 \end{figure}
 
@@ -152,7 +154,7 @@ The proof generation process did not possess enough relevancy for time measureme
                 grid=major,
                 grid style={dashed},
                 width=0.8\textwidth,
-                height=0.35\textwidth,
+                height=0.4\textwidth,
             ]
 
             \addplot[color=line-color2,mark=o] coordinates {
