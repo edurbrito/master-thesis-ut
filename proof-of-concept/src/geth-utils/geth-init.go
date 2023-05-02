@@ -60,20 +60,25 @@ func main() {
 	// 0311885597e5eaa5e9b06e70a4e50e663c3d8396
 	accountAddress := strings.Split(fileName, "--")[2]
 
-	signers := []string{"0x" + accountAddress}
+	// parse the signers addresses and remove duplicates
+	signersMap := make(map[string]bool)
+	signersMap["0x"+accountAddress] = true
 
 	if *signersFlag != "" {
-		signers = append(signers, strings.Split(*signersFlag, ",")...)
-
-		fmt.Println("Parsing signers...")
-
-		for _, signer := range signers {
+		for _, signer := range strings.Split(*signersFlag, ",") {
 			matched, _ := regexp.MatchString(hexCharsRegex, signer)
 			if !matched {
 				fmt.Printf("Error: invalid signer address '%s'\n", signer)
 				return
 			}
+			signersMap[signer] = true
 		}
+	}
+
+	// map keys to slice
+	signers := make([]string, 0, len(signersMap))
+	for k := range signersMap {
+		signers = append(signers, k)
 	}
 
 	// sort the signers
@@ -131,7 +136,7 @@ func main() {
 	// concatenate all signers into one string
 	signersString := strings.Join(signers, "")
 
-	_, err = fmt.Fprintf(file, genesis, signersString)
+	// write genesis.json file
 	if err != nil {
 		fmt.Println("Error writing to genesis.json file:", err)
 		return

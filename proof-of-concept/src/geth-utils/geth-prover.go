@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"math/big"
+	"math/rand"
 	"net/http"
 	"os"
 	"regexp"
@@ -32,7 +33,41 @@ func main() {
 
 	flag.Parse()
 
-	client, err := ethclient.Dial("http://192.168.0.1:8545")
+	signers := []string{}
+
+	if *signersFlag != "" {
+		signers = append(signers, strings.Split(*signersFlag, ",")...)
+		for _, signer := range signers {
+			matched, _ := regexp.MatchString(hexCharsRegex, signer)
+			if !matched {
+				fmt.Printf("Error: invalid signer address '%s'\n", signer)
+				os.Exit(1)
+			}
+		}
+	}
+
+	ips := []string{}
+
+	if *ipsFlag != "" {
+		ips = append(ips, strings.Split(*ipsFlag, ",")...)
+		for _, ip := range ips {
+			matched, _ := regexp.MatchString(ipRegex, ip)
+			if !matched {
+				fmt.Printf("Error: invalid ip address '%s'\n", ip)
+				os.Exit(1)
+			}
+		}
+	}
+
+	if len(signers) != len(ips) {
+		fmt.Println("Error: number of signers and IPs must be equal")
+		os.Exit(1)
+	}
+
+	// choose random ip
+	clientIp := ips[rand.Intn(len(ips))]
+
+	client, err := ethclient.Dial(clientIp)
 	if err != nil {
 		fmt.Println("Error connecting to client:", err)
 		os.Exit(1)
@@ -146,38 +181,6 @@ func main() {
 	fmt.Printf("Valid Transaction: %t\n", bytes.Equal(txData.Data(), block.ParentHash().Bytes()))
 
 	// ask the witnesses to sign the block hash
-	signers := []string{}
-
-	if *signersFlag != "" {
-		signers = append(signers, strings.Split(*signersFlag, ",")...)
-		for _, signer := range signers {
-			matched, _ := regexp.MatchString(hexCharsRegex, signer)
-			if !matched {
-				fmt.Printf("Error: invalid signer address '%s'\n", signer)
-				os.Exit(1)
-			}
-		}
-	}
-
-	ips := []string{}
-
-	if *ipsFlag != "" {
-		ips = append(ips, strings.Split(*ipsFlag, ",")...)
-		for _, ip := range ips {
-			matched, _ := regexp.MatchString(ipRegex, ip)
-			if !matched {
-				fmt.Printf("Error: invalid ip address '%s'\n", ip)
-				os.Exit(1)
-			}
-		}
-	}
-
-	if len(signers) != len(ips) {
-		fmt.Println("Error: number of signers and IPs must be equal")
-		os.Exit(1)
-	}
-
-	// get the witnesses' signatures
 	signatures := []string{}
 
 	// call equivalent of

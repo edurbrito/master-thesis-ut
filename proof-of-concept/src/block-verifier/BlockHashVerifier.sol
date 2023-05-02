@@ -6,6 +6,11 @@ contract BlockHashVerifier {
 
     int public counter = 0;
     
+    function verifyLastBlockHashPure(bytes32 hashToCheck) public view returns(bool) {
+        bytes32 lastBlockHash = blockhash(block.number - 1);
+        return lastBlockHash == hashToCheck;
+    }
+
     function verifyLastBlockHash(bytes32 hashToCheck) public returns(bool) {
         bytes32 lastBlockHash = blockhash(block.number - 1);
         counter++;

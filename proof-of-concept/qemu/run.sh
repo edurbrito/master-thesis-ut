@@ -80,7 +80,7 @@ if [ ! -e "/sys/class/net/tap-$INSTANCE_TYPE-$INSTANCE_NUMBER" ]; then
 fi
 
 qemu-img create -b "${BASE_IMG}" -f qcow2 $INSTANCE_TYPE-$INSTANCE_NUMBER -F raw
-screen qemu-system-x86_64 -enable-kvm -name "instance-${INSTANCE_TYPE}-${INSTANCE_NUMBER}" \
+qemu-system-x86_64 -enable-kvm -name "instance-${INSTANCE_TYPE}-${INSTANCE_NUMBER}" \
     -display none -no-user-config -nodefaults \
     -m 1G,maxmem=2G,slots=2 -device virtio-balloon \
     -cpu host -smp 2 -machine q35,accel=kvm,usb=off,dump-guest-core=off \
