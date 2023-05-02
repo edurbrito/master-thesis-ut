@@ -21,5 +21,3 @@ references/crypto/*
 references/thesis-examples/*
 
 proof-of-concept/openwrt-builder/output/*
-
-proof-of-concept/src/go-ethereum/
