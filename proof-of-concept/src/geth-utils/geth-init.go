@@ -137,6 +137,7 @@ func main() {
 	signersString := strings.Join(signers, "")
 
 	// write genesis.json file
+	_, err = fmt.Fprintf(file, genesis, signersString)
 	if err != nil {
 		fmt.Println("Error writing to genesis.json file:", err)
 		return
