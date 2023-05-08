@@ -63,7 +63,7 @@ The bridge interface, pooling all the mesh traffic exchanged between the tap int
     \label{fig:mesh-traffic}
 \end{figure}
 
-The Blockchain activity was also monitored, in order to observe the protocol behaviour, regarding the block generation and proposal phases. Figure~\ref{fig:blockchain-blocks-generation} captures the number of messages exchanged between the instances, during a time frame of typical protocol activity. The interval time between blocks, set to 10 seconds, corresponds to the higher peaks of TCP traffic, while the UDP traffic is more evenly distributed. This behaviour gets more pronounced as the number of instances increases. 
+The Blockchain activity was also monitored, in order to observe the protocol behaviour, regarding the block generation and proposal phases. Figure~\ref{fig:blockchain-blocks-generation} captures the number of messages exchanged between the instances, during a time frame of typical protocol activity. The interval time between blocks, set to 10 seconds, corresponds to the higher peaks of TCP traffic, while the UDP traffic is more evenly distributed. This behaviour gets more pronounced as the number of instances increases, but the overall traffic is still proportionally low, with no significant impact on the network performance.
 
 \begin{figure} [b!]
     \centering
@@ -84,7 +84,7 @@ The Blockchain activity was also monitored, in order to observe the protocol beh
                 grid=major,
                 grid style={dashed},
                 width=\textwidth,
-                height=0.48\textwidth,
+                height=0.47\textwidth,
                 legend pos=north west
             ]
         
@@ -116,7 +116,7 @@ The Blockchain activity was also monitored, in order to observe the protocol beh
                 grid=major,
                 grid style={dashed},
                 width=\textwidth,
-                height=0.48\textwidth,
+                height=0.47\textwidth,
                 legend pos=north west
             ]
         
@@ -167,7 +167,9 @@ The proof generation process did not possess enough relevancy for time measureme
     \end{center}
 \end{figure}
 
-In retrospective, the main goal of achieving a fully functional proof-of-concept for the \pol{} protocol was, indeed, reached. We have fulfilled the requirements proposed in Chapter~\ref{sec:protocol-fundamentals} and made a demonstration possible. The protocol was implemented in a distributed setting, with a modular network architecture, and a clear separation of concerns between the different stages. We have also engineered the solution with enough flexibility, allowing for an easy integration of new components, or the replacement or tuning of the existing ones, in order to adapt to different environments, or to improve the overall performance. Further measurement considerations, along with the demonstration in a physical environment, are already in our horizon. The next chapter will address the overall conclusions and the future work that may be conducted, in order to improve and expand this \pol{} protocol.
+In retrospective, the main goal of achieving a fully functional proof-of-concept for the \pol{} protocol was, indeed, reached. We have fulfilled the requirements proposed in Chapter~\ref{sec:protocol-fundamentals} and made a demonstration possible. The protocol was implemented in a distributed setting, with a modular network architecture, and a clear separation of concerns between the different stages. We have also engineered the solution with enough flexibility, allowing for an easy integration of new components, or the replacement or tuning of the existing ones, in order to adapt to different environments, or to improve the overall performance. Further measurement considerations, along with the demonstration in a physical environment, are already in our horizon. 
+
+The thesis work extended over several months, spanning multiple semesters and encompassing several distinct stages and significant milestones. The first semester was primarily dedicated to researching and reviewing permissionless consensus mechanisms, which led to prototyping and demonstrating an ad-hoc consensus protocol. This work accounted for approximately 250 hours of effort. In the second semester, the focus was on researching the \pol{} paradigm and the protocol's design. The theoretical work of reviewing existing solutions, dissecting the paradigm, and proposing a new protocol, took approximately 350 hours of effort. This work was interleaved with the implementation of the proof-of-concept. Multiple weeks were spent on trials with the image building, the network setup, the deployment in physical devices, and the configuration of the consensus protocol. The practical work accounted for approximately 400 hours of total effort, including, as well, the successes reported. The thesis writing took place in both semesters and is included in the estimations. The work is still ongoing, and the next chapter will address the overall conclusions and future work that is to be conducted to improve and expand this \pol{} protocol.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
