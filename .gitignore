@@ -22,3 +22,5 @@ references/crypto/*
 references/thesis-examples/*
 
 proof-of-concept/openwrt-builder/output/*
+
+_references/

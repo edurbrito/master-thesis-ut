@@ -5,3 +5,4 @@ This directory contains the source files for the utility programs used in the pr
 * The folder `geth-utils` contains the Go source files for the utility programs used to interact with the Ethereum blockchain.
 * The folder `block-verifier` contains the Solidity source files as example smart contracts for the proof of location verification.
 * The folder `pol-verifier` contains an example smart contract for the verification of the proof-of-location signatures.
+* The folder `go-ethereum` may contain the source files for the Go Ethereum client, if used instead of the pre-compiled binaries.
