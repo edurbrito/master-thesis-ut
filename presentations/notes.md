@@ -1,8 +1,11 @@
-
-Before we jump into the definitions,
-I would like you all to think,
-for a brief moment, in a couple
-of scenarios:
+Let's imagine a world where technology 
+seamlessly integrates with our daily lives, 
+transforming how we work, communicate, 
+and even how we perceive reality.
+But before we dive into the specifics, 
+let's explore a few intriguing scenarios
+that I would like you all to think,
+for a brief moment:
 
 How would Joe Biden prove the
 authenticity of his wonderful
@@ -243,23 +246,11 @@ We've configured the network via the genesis file,
 and building on the mesh network infrastructure we just set up,
 the ethereum nodes were able to discover eachother
 via the exposed API endpoints,
-and start producing blocks, achieving time synchronization.
-
-In this example, we chose the Proof-of-Authority mechanism
-and a block time of 10 seconds.
+and start producing blocks, achieving so time synchronization.
 
 The decision around Ethereum had also the purpose of enabling
 the execution of smart contracts, programmed in Solidity
 and executed by the Ethereum Virtual Machine.
-
-The whole process was automated with a set of utility tools
-that we coded to help us easily boot up an ad-hoc ethereum network
-within the mesh.
-And all the software that we produced and compiled
-plus all the packages needed to achieve all these steps
-of space and time synchronization were all embeded 
-into the OpenWRT image and made available independently
-to each node.
 
 --------------------------------------------
 
@@ -307,11 +298,8 @@ in a decentralized and trustless way.
 --------------------------------------------
 
 At the end, we also conducted some measurements
-to understand the behaviour and performance of our system.
-Since our protocol was fundamentally new and different 
-from all the others, we could not establish a fair comparison,
-but we still measured, for example, some performance factors
-at the mesh network level and at the blockchain level.
+to understand the behaviour and performance of our system,
+for example, at the mesh and blockchain levels.
 
 We noticed a seemingly linear increase 
 of the average protocol throughtput of both
@@ -373,5 +361,8 @@ Employing privacy preserving mechanisms
 like zero knowledge proofs
 And of course the Physical Deployment
 And the evaluation of the
-performance in real-world settings.
+performance in real-world settings
+
+to finally contribute to the creation of complete, 
+spatio-temporally sound and verifiable proofs-of-location.
 
