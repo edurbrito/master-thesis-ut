@@ -1,10 +1,10 @@
-Let's imagine a world where technology 
-seamlessly integrates with our daily lives, 
-transforming how we work, communicate, 
-and even how we perceive reality.
-But before we dive into the specifics, 
-let's explore a few intriguing scenarios
-that I would like you all to think,
+As Einstein has nicely put it,
+Reality is merely an illusion
+But maybe a very persistent one.
+So, in the spirit of keeping our brains in good shape,
+questioning this nature of reality, 
+let's together explore
+a few intriguing scenarios
 for a brief moment:
 
 How would Joe Biden prove the
@@ -23,30 +23,44 @@ that I was here in this room
 before you and at this moment in time, 
 defending my thesis?
 
-These are part of the set 
+---------------------------
+
+Hoping I leave your minds busy 
+thinking of these questions,
+Today I will guide you
+through dissection of the 
+Proof-of-Location Paradigm,
+first reviewing the most common entities
+and the interactions between, and
+second, going through evolution from trusted 
+and centralized systems
+towards decentralized appraoches.
+I will also detail my attempt
+at the design of 
+a novel decentralized Proof-of-Location protocol
+and the implementation of a proof-of-concept.
+
+Going back to the scenarios
+I just showed you,
+they are actually part of the set 
 of today's problems
 the typical GPS-based 
 location systems,
 mapping platforms, 
-or mobility and ride-hailing apps
+or mobility apps
 do not provide straight answers for.
-With this present surge of highly 
-realistic generative AI tools,
+And with this present surge of highly 
+realistic generative AI tools, for example,
 what we may need instead is 
 a paradigm shift,
 towards digital Proofs of Location.
 
 ---------------------------
 
-These proofs are nothing more profound
+These proofs are nothing more
 than electronic certificates that
 attest one's position 
 in both space and time.
-
-To get such proofs,
-some arrangements between 
-different types of entities
-should be put in place.
 
 Typically,
 these location-proof setups 
@@ -192,7 +206,7 @@ This need was identified in the most recent
 decentralized protocols and the problem has been
 solved with a Bizantine fault-tolerant 
 clock synchronization mechanism.
-We have looked into it and reasoned about the
+I have looked into it and reasoned about the
 similarities between such mechanisms 
 and the problem of consensus in distributed systems.
 In simple terms, synchronizing clocks is nothing 
